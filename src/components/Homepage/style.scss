@@ -1,5 +1,13 @@
 @import '../common';
 
+.homepage {
+    & > section {
+        margin-top: 24px;
+        padding: 0 15%;
+    }
+}
+
+// Start of hero
 .hero {
     position: relative;
     overflow-x: hidden;
@@ -81,3 +89,58 @@
         opacity: .8;
     }
 }
+// end of hero
+
+// start of about 
+
+section.about {
+    background-color: $primary-color-3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    
+    align-items: flex-start;
+
+    & > div {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .caption {
+            @include postAbsolute();
+            
+            padding: 48px 32px;
+            z-index: 2;
+
+            h3 {
+                margin-bottom: 48px;
+                text-align: center;
+                color: $text-color-1;
+                font-size: 28px;
+            }
+
+            p {
+                color: $text-color-1;
+                text-align: center;
+                font-size: 18px;
+            }
+        }
+
+        .layer {
+            @include postAbsolute();
+            @include fullSize();
+
+            background-color: $primary-color-1;
+            opacity: .7;
+        }
+    }
+}
+
+
+// end of about

@@ -3,7 +3,7 @@ header {
   position: fixed;
   width: 100%;
   padding: 8px 4%;
-  z-index: 2;
+  z-index: 10;
 }
 
 header .logo img {
