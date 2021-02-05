@@ -6,8 +6,8 @@ const Homepage = () => {
         <div className="hero">
             <img src="./images/banner.jpg" alt="Navigating Your Legal Needs"/>
             <div className="caption">
-                <h1>"Navigating Yout <span>Legal Needs</span>"</h1>
-                <br/><br/>
+                <h1>"Navigating Yout Legal Needs"</h1>
+
                 {/* Contact us button */}
                 <button className="contact-us">
                     <div>Contact</div>

@@ -1,0 +1,103 @@
+header {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  padding: 8px 4%;
+  z-index: 2;
+}
+
+header .logo img {
+  height: 80px;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header nav .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .links li {
+  padding: 8px 12px;
+  -webkit-transition: background ease-in .2s;
+  transition: background ease-in .2s;
+}
+
+header nav .links li:hover {
+  cursor: pointer;
+  background: #3f74d1;
+}
+
+header nav .links li:hover > * {
+  color: #f5f5f5;
+}
+
+header nav .links li > * {
+  height: 100%;
+  color: #153f8a;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: .5px;
+}
+
+header nav .links .link-extended {
+  position: relative;
+}
+
+header nav .links .link-extended > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .links .link-extended:hover .sub-links {
+  display: block;
+}
+
+header nav .sub-links {
+  position: absolute;
+  top: 0;
+  display: none;
+  top: 100%;
+  left: 0;
+  width: 150%;
+}
+
+header nav .sub-links li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 12px;
+  background: #f0f0f0;
+  border-left: solid 4px #3f74d1;
+}
+/*# sourceMappingURL=style.css.map */

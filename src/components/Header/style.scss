@@ -1,0 +1,80 @@
+@import '../common';
+
+header {
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    padding: 8px 4%;
+    z-index: 2;
+
+    .logo {
+
+        img {
+            height: 80px;
+        }
+    }
+
+    nav {
+        @include flexCenter();
+        
+        justify-content: space-between;
+
+        .links {
+            display: flex;
+            align-items: center;
+
+            li {
+                padding: 8px 12px;
+                transition: background ease-in .2s;
+
+                &:hover {
+                    cursor: pointer;
+                    background: $primary-color-1;
+                    
+                    & > * {
+                        color: $text-color-1;
+                    }
+                }
+            }
+
+            li > * {
+                height: 100%;
+                color: $primary-color-2;
+                font-size: 18px;
+                font-weight: 300;
+                letter-spacing: .5px;
+            }
+
+            .link-extended {
+                position: relative;
+
+                & > div {
+                    @include flexCenter();
+                }
+
+                &:hover {
+                    .sub-links {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .sub-links {
+            @include postAbsolute();
+            
+            display: none;
+            top: 100%;
+            left: 0;    
+            width: 150%;
+            
+            li {
+                @include flexCenter();
+                
+                padding: 12px 12px;
+                background: $primary-color-4;
+                border-left: solid 4px $primary-color-1;
+            }
+        }
+    }
+}
