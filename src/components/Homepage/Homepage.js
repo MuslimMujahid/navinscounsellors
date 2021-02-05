@@ -1,5 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './style.scss'
+
+import { practice_area_en } from './items'
 
 const Homepage = () => {
     return (
@@ -48,6 +51,30 @@ const Homepage = () => {
                 </div>
             </section>
             {/* End of about section */}
+
+            {/* Start of practice area section */}
+            <section className="practice-area">
+                <ul className="items">
+                {
+                    practice_area_en.map(item => 
+                        <li key={item.link}>
+                            <Link to={'practice-area/' + item.link}>
+                                <div className="image">
+                                    <img src={item.image} alt={item.title} />
+                                </div>
+                                <div className="caption">
+                                    <div className="triangle"></div>
+                                    <div className="square">
+                                        { item.title }
+                                    </div>
+                                </div>
+                            </Link>
+                        </li>
+                    )
+                }
+                </ul>
+            </section>
+            {/* End of practice area section */}
         </div>
     )
 }
