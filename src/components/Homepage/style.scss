@@ -2,7 +2,7 @@
 
 .homepage {
     & > section {
-        margin-top: 24px;
+        margin-top: 48px;
         padding: 0 15%;
 
         &.lawyer {
@@ -151,7 +151,9 @@ section.about {
 // start of peactice area
 
 section.practice-area {
-    background-color: $primary-color-3;
+    background-color: $primary-color-4;
+    padding-top: 24px;
+    padding-bottom: 24px;
 
     .items {
         display: grid;
@@ -185,7 +187,7 @@ section.practice-area {
                     width: 0;
                     height: 0;
                     border-top: 40px solid transparent;
-                    border-right: 600px solid $primary-color-2;
+                    border-right: 600px solid $primary-color-1;
                 }
 
                 .square {

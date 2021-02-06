@@ -7,6 +7,7 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import { practice_area_en, lawyer_en } from '../items'
 import LawyerCarouselItem from './LawyerCarouselItem'
 import { Address, Copyright } from '../Footer/Footer'
+import SectionTitle from '../SectionTitle/SectionTitle'
 
 const handleDragStart = (e) => e.preventDefault();
 
@@ -24,7 +25,7 @@ const Homepage = () => {
             <div className="hero">
                 <img src="./images/banner.jpg" alt="Navigating Your Legal Needs"/>
                 <div className="caption">
-                    <h1>"Navigating Yout Legal Needs"</h1>
+                    <h1>"Navigating Your Legal Needs"</h1>
 
                     {/* Contact us button */}
                     <button className="contact-us">
@@ -68,6 +69,7 @@ const Homepage = () => {
 
             {/* Start of practice area section */}
             <section className="practice-area">
+                <SectionTitle title="Our Practice Area" />
                 <ul className="items">
                 {
                     practice_area_en.map(item => 
@@ -92,6 +94,7 @@ const Homepage = () => {
 
             {/* Start of lawyer section */}
             <section className="lawyer">
+                <SectionTitle title="Meet Our Lawyers" />
                 <AliceCarousel 
                     mouseTracking 
                     items={lawyer_carousel_items}

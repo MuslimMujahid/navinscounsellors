@@ -1,0 +1,17 @@
+@import '../common';
+
+.section-title {
+    text-align: center;
+    padding: 24px 0;
+    margin-bottom: 48px;
+    
+    h2 {
+        display: inline;
+        padding-left: 24px;
+        border-left: solid 4px $primary-color-2;
+        font-size: 32px;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-family: 'Arapey', serif;
+    }
+}

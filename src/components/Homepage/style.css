@@ -1,5 +1,5 @@
 .homepage > section {
-  margin-top: 24px;
+  margin-top: 48px;
   padding: 0 15%;
 }
 
@@ -162,7 +162,9 @@ section.about > div .layer {
 }
 
 section.practice-area {
-  background-color: #ffffff;
+  background-color: #ececec;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 section.practice-area .items {
@@ -206,7 +208,7 @@ section.practice-area .items li .caption .triangle {
   width: 0;
   height: 0;
   border-top: 40px solid transparent;
-  border-right: 600px solid #153f8a;
+  border-right: 600px solid #3f74d1;
 }
 
 section.practice-area .items li .caption .square {
