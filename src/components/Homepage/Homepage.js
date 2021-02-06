@@ -1,8 +1,21 @@
 import React from 'react'
+import AliceCarousel from 'react-alice-carousel';
 import { Link } from 'react-router-dom'
-import './style.scss'
 
-import { practice_area_en } from './items'
+import './style.scss'
+import 'react-alice-carousel/lib/alice-carousel.css';
+import { practice_area_en, lawyer_en } from './items'
+import LawyerCarouselItem from './LawyerCarouselItem'
+
+const handleDragStart = (e) => e.preventDefault();
+
+// This items goes to the lawyer section
+const lawyer_carousel_items = lawyer_en.map(item => 
+    <LawyerCarouselItem 
+        item={item} 
+        handleDragStart={handleDragStart} 
+    />
+)
 
 const Homepage = () => {
     return (
@@ -58,7 +71,7 @@ const Homepage = () => {
                 {
                     practice_area_en.map(item => 
                         <li key={item.link}>
-                            <Link to={'practice-area/' + item.link}>
+                            <Link to={item.link}>
                                 <div className="image">
                                     <img src={item.image} alt={item.title} />
                                 </div>
@@ -75,6 +88,21 @@ const Homepage = () => {
                 </ul>
             </section>
             {/* End of practice area section */}
+
+            {/* Start of lawyer section */}
+            <section className="lawyer">
+                <AliceCarousel 
+                    mouseTracking 
+                    items={lawyer_carousel_items}
+                    autoPlay={true}
+                    responsive= {{ 0 : { items: 1 }, 1024 : { items: 4 }}}
+                    infinite={true}
+                    animationDuration={1000}
+                    autoPlayInterval={2000}
+                />
+            </section>
+
+            {/* End of lawyer section */}
         </div>
     )
 }
