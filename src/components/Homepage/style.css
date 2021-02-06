@@ -177,6 +177,7 @@ section.practice-area .items {
 
 section.practice-area .items li {
   position: relative;
+  overflow: hidden;
 }
 
 section.practice-area .items li img {
@@ -184,6 +185,10 @@ section.practice-area .items li img {
   height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-transition: all ease-in-out .2s;
+  transition: all ease-in-out .2s;
 }
 
 section.practice-area .items li .caption {
@@ -209,6 +214,8 @@ section.practice-area .items li .caption .triangle {
   height: 0;
   border-top: 40px solid transparent;
   border-right: 600px solid #3f74d1;
+  -webkit-transition: border ease-in-out .2s;
+  transition: border ease-in-out .2s;
 }
 
 section.practice-area .items li .caption .square {
@@ -225,6 +232,15 @@ section.practice-area .items li .caption .square {
           align-items: center;
   background-color: #153f8a;
   font-size: 20px;
+}
+
+section.practice-area .items li:hover img {
+  width: 140%;
+}
+
+section.practice-area .items li:hover .caption .triangle {
+  border-top: 80px solid transparent;
+  border-right: 400px solid #3f74d1;
 }
 
 section.lawyer .lawyer-carousel-item {

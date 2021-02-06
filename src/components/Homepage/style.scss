@@ -149,7 +149,6 @@ section.about {
 // end of about
 
 // start of peactice area
-
 section.practice-area {
     background-color: $primary-color-4;
     padding-top: 24px;
@@ -162,11 +161,14 @@ section.practice-area {
 
         li {
             position: relative;
+            overflow: hidden;
         
             img {
                 width: 100%;
                 height: 400px;
                 object-fit: cover;
+                object-position: center;
+                transition: all ease-in-out .2s;
             }
     
             .caption {
@@ -188,6 +190,7 @@ section.practice-area {
                     height: 0;
                     border-top: 40px solid transparent;
                     border-right: 600px solid $primary-color-1;
+                    transition: border ease-in-out .2s;
                 }
 
                 .square {
@@ -196,6 +199,19 @@ section.practice-area {
 
                     background-color: $primary-color-2;
                     font-size: 20px;
+                }
+            }
+
+            &:hover {
+                img {
+                    width: 140%;
+                }
+
+                .caption {
+                    .triangle {
+                        border-top: 80px solid transparent;
+                        border-right: 400px solid $primary-color-1;
+                    }
                 }
             }
         }
