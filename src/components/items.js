@@ -1,3 +1,7 @@
+import WhatsAppIcon from '@material-ui/icons/WhatsApp'
+import InstagramIcon from '@material-ui/icons/Instagram'
+import LinkedInIcon from '@material-ui/icons/LinkedIn'
+
 const practice_area_en = [
     {
         title: 'Corporate & Employment',
@@ -77,4 +81,22 @@ const lawyer_en = [
     }
 ]
 
-export { practice_area_en, lawyer_en }
+const social = [
+    {
+        type: 'Whatsapp',
+        icon: <WhatsAppIcon style={{ fontSize: 60 }} />,
+        link: '#'
+    },
+    {
+        type: 'Instagram',
+        icon: <InstagramIcon style={{ fontSize: 60 }} />,
+        link: 'https://instagram.com/navins.law?igshid=htad3gt4ltip'
+    },
+    {
+        type: 'Linkedin',
+        icon: <LinkedInIcon style={{ fontSize: 60 }} />,
+        link: '#'
+    }
+]
+
+export { practice_area_en, lawyer_en, social }

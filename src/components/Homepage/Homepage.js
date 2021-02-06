@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom'
 
 import './style.scss'
 import 'react-alice-carousel/lib/alice-carousel.css';
-import { practice_area_en, lawyer_en } from './items'
+import { practice_area_en, lawyer_en } from '../items'
 import LawyerCarouselItem from './LawyerCarouselItem'
+import { Address, Copyright } from '../Footer/Footer'
 
 const handleDragStart = (e) => e.preventDefault();
 
@@ -103,6 +104,13 @@ const Homepage = () => {
             </section>
 
             {/* End of lawyer section */}
+            
+            {/* Start of footer */}
+            <footer>
+                <Address />
+                <Copyright />
+            </footer>
+            {/* End of footer */}
         </div>
     )
 }
