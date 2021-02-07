@@ -64,7 +64,7 @@ const lawyer_en = [
         education: ['Bachelor Degree of Law, University of Katolik Parahyangan'],
         organization: ['Indonesian Bar Association (PERADI)'],
         language: ['Bahasa Indonesia', 'English'],
-        image: '/images/lawyer-3.png',
+        image: '/images/lawyer-3.jpg',
         link: 'lawyer/galih-putra-perdama-sh',
     },
     {

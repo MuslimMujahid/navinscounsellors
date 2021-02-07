@@ -7,6 +7,9 @@ import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 const Header = () => {
     return (
         <header>
+            <div className="email">
+                <span>Email: info@navinscounsellors.com</span>
+            </div>
             <nav>
                 <div className="logo">
                     <img src="/images/logo2.jpg" alt="logo" />
