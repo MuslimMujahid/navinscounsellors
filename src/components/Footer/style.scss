@@ -2,15 +2,34 @@
 
 footer {
 
-    border-top: solid 1px $primary-color-4;
+    border-top: solid 1px $color-4;
 
     .contents {
         padding: 80px 40px;
     }
 
     .contents {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        @media screen and (min-width: $lg) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @media screen and (max-width: $lg) {
+            .contents {
+                display: flex;
+                flex-direction: row;
+                
+                .content {
+                    &:nth-child(1) { order: 3; }
+                    &:nth-child(2) { order: 1; }
+                    &:nth-child(3) { order: 2; }
+                }
+            }
+
+            .content {
+                margin-bottom: 80px;
+            }
+        } 
 
         .content {
             
@@ -24,7 +43,7 @@ footer {
                 display: flex;
                 
                 a {
-                    color: $text-color-2;
+                    color: $color-7;
                 }
             }
 
@@ -49,6 +68,11 @@ footer {
 
             .content-item {
                 margin-bottom: 12px;
+
+                tr > td:first-child {
+                    display: flex;
+                    padding-right: 8px;
+                }
             }
         }
     }
@@ -58,6 +82,6 @@ footer {
         text-align: center;
         font-size: 14px;
         font-weight: 300;
-        color: $primary-color-5;
+        color: $color-5;
     }
 }

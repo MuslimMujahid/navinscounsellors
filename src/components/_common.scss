@@ -1,14 +1,19 @@
 $desktop: 992px;
 $table: 768px;
 
-$primary-color-1: #3f74d1;
-$primary-color-2: #153f8a;
-$primary-color-3: #ffffff;
-$primary-color-4: #ececec;
-$primary-color-5: #bebebe;
+$color-1: #3f74d1;
+$color-2: #153f8a;
+$color-3: #ffffff;
+$color-4: #ececec;
+$color-5: #bebebe;
+$color-6: #f5f5f5;
+$color-7: #000000;
+$color-8: rgb(66, 68, 155);
 
-$text-color-1: #f5f5f5;
-$text-color-2: #000000;
+$sm: 567px;
+$md: 768px;
+$lg: 992px;
+
 
 @mixin flexCenter {
     display: flex;

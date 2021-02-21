@@ -8,10 +8,16 @@
     h2 {
         display: inline;
         padding-left: 24px;
-        border-left: solid 4px $primary-color-2;
+        border-left: solid 4px $color-2;
         font-size: 32px;
         font-weight: 300;
         text-transform: uppercase;
         font-family: 'Arapey', serif;
+    }
+
+    @media screen and (max-width: $md) {
+        h2 {
+            font-size: 24px;
+        }
     }
 }

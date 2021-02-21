@@ -1,11 +1,12 @@
 @import '../common';
 
 header {
+
     background-color: #fff;
     position: fixed;
     width: 100%;
     z-index: 10;
-    border-bottom: solid 1px $primary-color-1;
+    // border-bottom: solid 1px $color-1;
 
     & > * {
         padding: 8px 4%;
@@ -14,7 +15,7 @@ header {
     .logo {
 
         img {
-            height: 80px;
+            height: 60px;
         }
     }
 
@@ -22,8 +23,9 @@ header {
         @include flexCenter();
         
         justify-content: space-between;
-
+        
         .links {
+            z-index: 28;
             display: flex;
             align-items: center;
 
@@ -33,17 +35,17 @@ header {
 
                 &:hover {
                     cursor: pointer;
-                    background: $primary-color-1;
+                    background: $color-1;
                     
                     & > * {
-                        color: $text-color-1;
+                        color: $color-6;
                     }
                 }
             }
 
             li > * {
                 height: 100%;
-                color: $primary-color-2;
+                color: $color-2;
                 font-size: 18px;
                 font-weight: 300;
                 letter-spacing: .5px;
@@ -76,14 +78,74 @@ header {
                 @include flexCenter();
                 
                 padding: 12px 12px;
-                background: $primary-color-4;
-                border-left: solid 4px $primary-color-1;
+                background: $color-4;
+                border-left: solid 4px $color-1;
+            }
+
+            .menu-button {
+                > * {
+                    background-color: $color-8;
+                }
+            }
+        }
+
+        @media screen and (max-width: $lg) {
+            .links-lg {
+                display: none;
+            }
+        }
+        @media screen and (min-width: $lg) {
+            .menu-button {
+                display: none;
+            }
+        } 
+    }
+
+    .email {
+        background-color: rgb(240, 240, 240);
+        color: rgb(143, 143, 143);
+    }
+    
+    .links-md {
+        @include postAbsolute();
+        display: none;
+        width: 100%;
+        background: $color-6;
+        left: 0;
+        top: 100%;
+        z-index: 25;
+        
+        li {
+            padding: 18px 36px;
+            font-size: 18px;
+            border-bottom: solid 1px $color-3;
+            
+            & > * {
+                color: $color-8;
             }
         }
     }
 
-    .email {
-        background-color: $primary-color-2;
-        color: $text-color-1;
+    .layer {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: $color-7;
+        opacity: .7;
+        width: 100vw;
+        height: 100vh;
+        z-index: 20;
+    }
+
+    @media screen and (max-width: $md) {
+        .logo {
+            img {
+                height: 40px;
+            }
+        }   
+
+        .links-md {
+            display: block;
+        }
     }
 }

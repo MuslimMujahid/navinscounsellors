@@ -13,4 +13,10 @@
   text-transform: uppercase;
   font-family: 'Arapey', serif;
 }
+
+@media screen and (max-width: 768px) {
+  .section-title h2 {
+    font-size: 24px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

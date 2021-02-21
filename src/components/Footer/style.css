@@ -6,11 +6,19 @@ footer .contents {
   padding: 80px 40px;
 }
 
-footer .contents {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+@media screen and (min-width: 992px) {
+  footer .contents {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  footer .contents .content {
+    margin-bottom: 80px;
+  }
 }
 
 footer .contents .content * {

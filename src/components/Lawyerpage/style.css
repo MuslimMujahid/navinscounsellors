@@ -1,0 +1,42 @@
+.lawyerpage {
+  padding: 180px 15% 40px 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.lawyerpage .image img {
+  height: 400px;
+}
+
+.lawyerpage .bio {
+  padding: 0 48px;
+}
+
+.lawyerpage .bio * {
+  font-family: 'Arapey', serif;
+  font-weight: 300;
+  color: #6e6e6e;
+}
+
+.lawyerpage .bio .content.top h1 {
+  display: inline;
+  border-bottom: solid 1px #000000;
+  padding-bottom: 2px;
+}
+
+.lawyerpage .bio .content.top h2 {
+  font-size: 18px;
+  font-style: italic;
+  padding-top: 2px;
+}
+
+.lawyerpage .bio .content {
+  margin-bottom: 12px;
+}
+
+.lawyerpage .bio .content .title {
+  font-size: 18px;
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,4 +1,8 @@
 import React from 'react'
+import RoomIcon from '@material-ui/icons/Room';
+import PhoneIcon from '@material-ui/icons/Phone';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
 import { social } from '../items'
 import './style.scss'
 
@@ -22,41 +26,96 @@ const Address = () => {
                 </div>
             </div>
             <div className="content">
-                <address class="vcard content-item">
-                    <span class="fn org content-title">Jakarta Office</span>
-                    <span class="adr">
-                        <span class="street-address">Jl. H.R. Rasuna Said, Kuningan</span>
-                        <span class="locality">Epicentrum Walk Lantai 3 Suite A306-307</span>  
-                        <span class="region">Jakarta Selatan</span>
-                        <span class="postal-code">12940</span>
-                        <span class="country-name">Indonesia</span>
+                <address className="vcard content-item">
+                    <span className="fn org content-title">Jakarta Office</span>
+                    <span className="adr">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><RoomIcon/></td>
+                                    <td>
+                                        <span className="street-address">Jl. H.R. Rasuna Said, Kuningan</span>
+                                        <span className="locality">Epicentrum Walk Lantai 3 Suite A306-307</span>  
+                                        <span className="region">Jakarta Selatan</span>
+                                        <span className="postal-code">12940</span>
+                                        <span className="country-name">Indonesia</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </span>
                 </address>
                 <address className="content-item">
-                    <p>Phone : -</p>
-                    <p>Email  : info@navinscounsellors.com</p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><PhoneIcon /></td>
+                                <td><p>Phone : -</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </address>
+                <address className="content-item">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><MailOutlineIcon /></td>
+                                <td><p>Email  : info@navinscounsellors.com</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </address>
                 <div className="content-item">
-                    <p>Work Hour : Mon - Fri 09.00 - 17.00 </p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><AccessAlarmIcon /></td>
+                                <td><p>Work Hour : Mon - Fri 09.00 - 17.00 </p></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
 
             </div>
             <div className="content">
-                <address class="vcard content-item">
-                    <span class="fn org content-title">Makassar Office</span>
-                    <span class="adr">
-                        <span class="street-address">Jl. Urip Sumohardjo No. 20</span>
-                        <span class="locality">Gedung Graha Pena Lantai 5 Kav.507</span>  
-                        <span class="region">Makassar</span>
-                        <span class="postal-code">90234</span>
-                        <span class="country-name">Indonesia</span>
-                    </span>
+                <address className="vcard content-item">
+                    <span className="fn org content-title">Makassar Office</span>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><RoomIcon /></td>
+                                <td>
+                                    <span className="adr">
+                                        <span className="street-address">Jl. Urip Sumohardjo No. 20</span>
+                                        <span className="locality">Gedung Graha Pena Lantai 5 Kav.507</span>  
+                                        <span className="region">Makassar</span>
+                                        <span className="postal-code">90234</span>
+                                        <span className="country-name">Indonesia</span>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </address>
                 <address className="content-item">
-                    <p>Email : info@navinscounsellors.com </p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><MailOutlineIcon /></td>
+                                <td><p>Email : info@navinscounsellors.com </p></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </address>
                 <div className="content-item">
-                    <p>Work Hour : Mon - Fri 09.00 - 17.00 </p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><AccessAlarmIcon /></td>
+                                <td><p>Work Hour : Mon - Fri 09.00 - 17.00 </p></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
 
             </div>

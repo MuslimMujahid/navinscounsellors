@@ -23,19 +23,18 @@ const Homepage = () => {
     return (
         <div className="homepage">
             <div className="hero">
-                <img src="./images/banner.jpg" alt="Navigating Your Legal Needs"/>
+                {/* <img src="./images/banner.jpg" alt="Navigating Your Legal Needs"/> */}
                 <div className="caption">
-                    <h1>"Navigating Your Legal Needs"</h1>
+                    <h1>Navigating Your Legal Needs</h1>
 
                     {/* Contact us button */}
                     <button className="contact-us">
-                        <div>Contact</div>
-                        <div>Us</div>
+                        Contact Us
                     </button>
                 </div>
 
                 {/* Black Layer */}
-                <div className="layer"></div>
+                {/* <div className="layer"></div> */}
             </div>
             
             {/* Start of about section */}
@@ -99,7 +98,7 @@ const Homepage = () => {
                     mouseTracking 
                     items={lawyer_carousel_items}
                     autoPlay={true}
-                    responsive= {{ 0 : { items: 1 }, 1024 : { items: 4 }}}
+                    responsive= {{ 0 : { items: 1 }, 768 : { items: 2 }, 1224 : { items: 4 }}}
                     infinite={true}
                     animationDuration={1000}
                     autoPlayInterval={2000}

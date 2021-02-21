@@ -1,0 +1,44 @@
+
+@import '../common';
+
+.lawyerpage {
+    padding: 180px 15% 40px 15%;
+    display: flex;
+
+    .image img {
+        height: 400px;
+    }
+
+    .bio {
+        padding: 0 48px;
+
+        * {
+            font-family: 'Arapey', serif;
+            font-weight: 300;
+            color: $text-color-3;
+        }
+
+        .content.top {
+            h1 {
+                display: inline;
+                border-bottom: solid 1px #000000;
+                padding-bottom: 2px;
+            }
+
+            h2 {
+                font-size: 18px;
+                font-style: italic;
+                padding-top: 2px;
+            }
+        }
+
+        .content {
+            margin-bottom: 12px;
+
+            .title {
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+    }
+}
