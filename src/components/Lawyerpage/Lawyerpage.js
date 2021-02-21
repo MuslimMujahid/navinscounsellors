@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './style.scss'
 
 import { Address, Copyright } from '../Footer/Footer'
 import { lawyer_en } from '../items'
 
 const Lawyerpage = ({ match: { params: { link } }}) => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+    
     const lawyer = lawyer_en.find(item => item.link === '/lawyer/' + link) 
     return (
         <React.Fragment>

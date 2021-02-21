@@ -1,0 +1,53 @@
+@import '../common';
+
+.practiceAreapage {
+    .banner {
+        position: relative;
+
+        .image img {
+            width: 100%;
+            height: 800px;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        .layer {
+            @include fullSize();
+            @include postAbsolute();
+
+            background-color: rgba(0, 0, 0, .6);
+        }
+
+        .caption {
+            @include fullSize();
+            @include postAbsolute();
+            @include flexCenter();
+            padding-top: 32px;
+
+            h1 {
+                padding: 0 18px;
+                color: $color-3;
+                font-size: 80px;
+                text-transform: uppercase;
+                text-align: center;
+
+                @media screen and (max-width: $md) {
+                    font-size: 60px;
+                }
+            }
+        }
+    }
+
+    .content {
+        
+        p {
+            padding: 120px 24px;
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        @media screen and (min-width: $md) {
+            padding: 0 15%;
+        }
+    }
+}

@@ -305,7 +305,7 @@ section.lawyer {
                     .name, .role {
                         width: 100%;
                         text-align: center;
-                        font-size: 18px;
+                        font-size: 14px;
                         color: $color-6;
                         transition: padding ease-in-out .2s;
                     }
@@ -363,6 +363,16 @@ section.lawyer {
                         }
                     }
                 }
+            }
+
+            .Link {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: transparent;
+                z-index: 40;
             }
         }
     }

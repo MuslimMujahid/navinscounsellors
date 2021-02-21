@@ -22,16 +22,16 @@ const Header = () => {
                 </div>
                 <ul className="links links-lg">
                     <li>
-                        <Link to="#">Home</Link>
+                        <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to="#">About</Link>
+                        <Link to="/about">About</Link>
                     </li>
                     <li>
-                        <Link to="#">Practice Area</Link>
+                        <Link to="/practice-area">Practice Area</Link>
                     </li>
                     <li>
-                        <Link to="#">Lawyer</Link>
+                        <Link to="/lawyer">Lawyer</Link>
                     </li>
                     <li className="link-extended">
                         <div>
@@ -41,15 +41,15 @@ const Header = () => {
                         <ul className="sub-links">
                             
                             <li>
-                                <Link to="#">Articles</Link>
+                                <Link to="/articles">Articles</Link>
                             </li>
                             <li>
-                                <Link to="#">Career</Link>
+                                <Link to="/career">Career</Link>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <Link to="#">Contact Us</Link>
+                        <Link to="/contact-us">Contact Us</Link>
                     </li>
                 </ul>
                 <div className="menu-button">
@@ -66,16 +66,16 @@ const Header = () => {
                     style={{ transform: y.interpolate(v => `translateY(${v}%)`) }}
                 >
                     <li>
-                        <Link to="#">Home</Link>
+                        <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to="#">About</Link>
+                        <Link to="/about">About</Link>
                     </li>
                     <li>
-                        <Link to="#">Practice Area</Link>
+                        <Link to="/practice-area">Practice Area</Link>
                     </li>
                     <li>
-                        <Link to="#">Lawyer</Link>
+                        <Link to="/lawyer">Lawyer</Link>
                     </li>
                     <li className="link-extended">
                         <div>
@@ -85,15 +85,15 @@ const Header = () => {
                         <ul className="sub-links">
                             
                             <li>
-                                <Link to="#">Articles</Link>
+                                <Link to="/articles">Articles</Link>
                             </li>
                             <li>
-                                <Link to="#">Career</Link>
+                                <Link to="/career">Career</Link>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <Link to="#">Contact Us</Link>
+                        <Link to="/contact-us">Contact Us</Link>
                     </li>
                 </animated.ul>
             </nav>
