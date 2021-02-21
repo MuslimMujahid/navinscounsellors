@@ -3,6 +3,7 @@ import './App.css';
 
 import Header from './components/Header/Header'
 import Homepage from './components/Homepage/Homepage'
+import Lawyerpage from './components/Lawyerpage/Lawyerpage'
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <Header />
         <Switch>
           <Route path="/" component={Homepage} exact />
+          <Route path="/lawyer/:link" component={Lawyerpage} />
         </Switch>
       </Router>
     </div>

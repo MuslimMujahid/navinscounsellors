@@ -5,7 +5,7 @@ import { Address, Copyright } from '../Footer/Footer'
 import { lawyer_en } from '../items'
 
 const Lawyerpage = ({ match: { params: { link } }}) => {
-    const lawyer = lawyer_en.find(item => item.link === link) 
+    const lawyer = lawyer_en.find(item => item.link === '/lawyer/' + link) 
     return (
         <React.Fragment>
             <div className="lawyerpage">

@@ -41,7 +41,7 @@ const lawyer_en = [
         organization: ['Indonesian Bar Association (PERADI)'],
         language: ['Bahasa Indonesia', 'English'],
         image: '/images/lawyer-1.JPG',
-        link: 'lawyer/muh-naim-syahrir-sh-mh',
+        link: '/lawyer/muh-naim-syahrir-sh-mh',
     },
     {
         name: 'Febrian Yanata Putra, S.H., M.H.',
@@ -53,7 +53,7 @@ const lawyer_en = [
         organization: ['Indonesian Bar Association (PERADI)'],
         language: ['Bahasa Indonesia', 'English'],
         image: '/images/lawyer-2.jpeg',
-        link: 'lawyer/febriyan-yanata-putra-sh-mh',
+        link: '/lawyer/febriyan-yanata-putra-sh-mh',
     },
     {
         name: 'Galih Putra Perdana, S.H.',
@@ -65,7 +65,7 @@ const lawyer_en = [
         organization: ['Indonesian Bar Association (PERADI)'],
         language: ['Bahasa Indonesia', 'English'],
         image: '/images/lawyer-3.jpg',
-        link: 'lawyer/galih-putra-perdama-sh',
+        link: '/lawyer/galih-putra-perdama-sh',
     },
     {
         name: 'Fanny Jenifer, S.H.',
@@ -77,7 +77,7 @@ const lawyer_en = [
         organization: ['Indonesian Bar Association (PERADI)'],
         language: ['Bahasa Indonesia', 'English'],
         image: '/images/lawyer-4.jpg',
-        link: 'lawyer/fanny-jenifer-sh',
+        link: '/lawyer/fanny-jenifer-sh',
     }
 ]
 

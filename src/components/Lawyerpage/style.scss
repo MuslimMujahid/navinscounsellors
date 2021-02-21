@@ -15,7 +15,7 @@
         * {
             font-family: 'Arapey', serif;
             font-weight: 300;
-            color: $text-color-3;
+            color: $color-9;
         }
 
         .content.top {
@@ -40,5 +40,18 @@
                 font-weight: bold;
             }
         }
+    }
+
+    @media screen and (max-width: $lg) {
+        flex-direction: column;
+        align-items: center;
+
+        .image {
+            margin-bottom: 32px;
+        }
+    }
+
+    @media screen and (max-width: $md) {
+        padding: 180px 5px 40px 5px;
     }
 }
