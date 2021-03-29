@@ -32,12 +32,21 @@
 
 .hero img {
   width: 100vw;
-  height: 90vh;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .hero .caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   top: 0;
   -webkit-box-orient: vertical;
@@ -52,7 +61,8 @@
 
 .hero .caption h1 {
   margin-bottom: 60px;
-  color: #42449b;
+  color: #ffffff;
+  text-align: center;
 }
 
 .hero .caption span {
@@ -60,19 +70,21 @@
 }
 
 .hero .caption .contact-us {
-  background-color: #ffffff;
-  border: solid 2px #42449b;
+  background-color: #3f75d18e;
+  border: solid 2px #113169;
   padding: 18px 24px;
   font-size: 18px;
-  color: #42449b;
-  -webkit-transition: background ease-in-out .2s;
-  transition: background ease-in-out .2s;
+  color: #ffffff;
+  -webkit-transition: all ease-in-out .2s;
+  transition: all ease-in-out .2s;
 }
 
 .hero .caption .contact-us:hover {
-  background-color: #3f74d1;
-  border: solid 2px #3f74d1;
+  background-color: #153f8a;
+  border: solid 2px #113169;
   color: #ffffff;
+  -webkit-transform: translate(10px, -10px);
+          transform: translate(10px, -10px);
 }
 
 .hero .caption .contact-us:active div:first-child {
@@ -106,6 +118,9 @@ section.about {
 }
 
 @media screen and (max-width: 992px) {
+  section.about {
+    padding: 0 12px;
+  }
   section.about > div {
     margin-bottom: 12px;
   }
@@ -155,7 +170,7 @@ section.about > div .layer {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: #3f74d1;
+  background-color: #113169;
   opacity: .7;
 }
 
@@ -163,6 +178,12 @@ section.practice-area {
   background-color: #ececec;
   padding-top: 24px;
   padding-bottom: 24px;
+}
+
+@media screen and (max-width: 992px) {
+  section.practice-area {
+    padding: 0 12px;
+  }
 }
 
 section.practice-area .items {
@@ -196,6 +217,8 @@ section.practice-area .items li .caption {
 }
 
 section.practice-area .items li .caption {
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -204,19 +227,8 @@ section.practice-area .items li .caption {
       -ms-flex-direction: column;
           flex-direction: column;
   bottom: 0;
-  width: 100%;
-  height: 150px;
   opacity: .9;
   overflow: hidden;
-}
-
-section.practice-area .items li .triangle {
-  width: 0;
-  height: 0;
-  border-top: 40px solid transparent;
-  border-right: 600px solid #3f74d1;
-  -webkit-transition: border ease-in-out .2s;
-  transition: border ease-in-out .2s;
 }
 
 section.practice-area .items li .square {
@@ -231,8 +243,8 @@ section.practice-area .items li .square {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #153f8a;
-  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 32px;
 }
 
 section.practice-area .items li:hover img {
@@ -241,7 +253,7 @@ section.practice-area .items li:hover img {
 
 section.practice-area .items li:hover .caption .triangle {
   border-top: 80px solid transparent;
-  border-right: 400px solid #3f74d1;
+  border-right: 400px solid #113169;
 }
 
 @media screen and (max-width: 992px) {
@@ -326,7 +338,7 @@ section.lawyer .lawyer-carousel-item > div .squares {
 }
 
 section.lawyer .lawyer-carousel-item > div .squares .square-bottom {
-  background-color: #153f8a;
+  background-color: #113169;
   width: 100%;
   height: 40%;
   padding: 12px;
@@ -399,7 +411,7 @@ section.lawyer .lawyer-carousel-item > div .squares:hover .square-bottom > div .
 }
 
 section.lawyer .lawyer-carousel-item > div .squares:hover .square-bottom > div .link-button:hover {
-  background-color: #3f74d1;
+  background-color: #113169;
   color: #f5f5f5;
 }
 

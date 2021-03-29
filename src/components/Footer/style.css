@@ -4,6 +4,7 @@ footer {
 
 footer .contents {
   padding: 80px 40px;
+  background-color: #383838;
 }
 
 @media screen and (min-width: 992px) {
@@ -45,10 +46,20 @@ footer .contents {
   }
 }
 
+footer .contents .content {
+  color: #c7c7c7;
+}
+
 footer .contents .content * {
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
+}
+
+@media screen and (max-width: 992px) {
+  footer .contents .content * {
+    font-size: 14px;
+  }
 }
 
 footer .contents .content .social-media {
@@ -58,7 +69,7 @@ footer .contents .content .social-media {
 }
 
 footer .contents .content .social-media a {
-  color: #000000;
+  color: #ffffff;
 }
 
 footer .contents .content .content-title, footer .contents .content .street-address, footer .contents .content .locality, footer .contents .content .country-name {
@@ -74,6 +85,12 @@ footer .contents .content .content-title {
   text-decoration: none;
   font-weight: 500;
   font-size: 28px;
+}
+
+@media screen and (max-width: 992px) {
+  footer .contents .content .content-title {
+    font-size: 20px;
+  }
 }
 
 footer .contents .content .locality {

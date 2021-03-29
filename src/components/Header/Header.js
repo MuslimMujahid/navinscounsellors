@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { useSpring, animated } from 'react-spring'
 import MenuIcon from '@material-ui/icons/Menu'
+import { linkStateContext } from '../Context/linkStateContext'
 import './style.scss'
 
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
@@ -10,6 +11,7 @@ const Header = () => {
 
     const [{y}, set] = useSpring(() => ({y: -150}))
     const [layer, setLayer] = useState(false)
+    const linkStateCtx = useContext(linkStateContext)
 
     return (
         <header>
@@ -21,19 +23,19 @@ const Header = () => {
                     <img src="/images/logo5.jpg" alt="logo" />
                 </div>
                 <ul className="links links-lg">
-                    <li>
+                    <li className={linkStateCtx.state.home}>
                         <Link to="/">Home</Link>
                     </li>
-                    <li>
+                    <li className={linkStateCtx.state.about}>
                         <Link to="/about">About</Link>
                     </li>
-                    <li>
+                    <li className={linkStateCtx.state.practiceArea}>
                         <Link to="/practice-area">Practice Area</Link>
                     </li>
-                    <li>
+                    <li className={linkStateCtx.state.lawyer}>
                         <Link to="/lawyer">Lawyer</Link>
                     </li>
-                    <li className="link-extended">
+                    <li className={'link-extended ' + linkStateCtx.state.publications}>
                         <div>
                             Publications
                             <ArrowDropDownIcon fontSize="small"/>
@@ -48,7 +50,7 @@ const Header = () => {
                             </li>
                         </ul>
                     </li>
-                    <li>
+                    <li className={linkStateCtx.state.contactUs}>
                         <Link to="/contact-us">Contact Us</Link>
                     </li>
                 </ul>

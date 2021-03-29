@@ -6,6 +6,7 @@ footer {
 
     .contents {
         padding: 80px 40px;
+        background-color: rgb(56, 56, 56);
     }
 
     .contents {
@@ -33,17 +34,23 @@ footer {
 
         .content {
             
+            color: rgb(199, 199, 199);
+
             * {
                 font-style: normal;
                 font-weight: 300;
                 font-size: 18px;
+
+                @media screen and (max-width: $lg) {
+                    font-size: 14px;
+                }
             }
 
             .social-media {
                 display: flex;
                 
                 a {
-                    color: $color-7;
+                    color: $color-3;
                 }
             }
 
@@ -60,6 +67,10 @@ footer {
                 text-decoration: none;
                 font-weight: 500;
                 font-size: 28px;
+            
+                @media screen and (max-width: $lg) {
+                    font-size: 20px;
+                }
             }
 
             .locality {

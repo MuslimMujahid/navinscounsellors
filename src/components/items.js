@@ -10,13 +10,13 @@ const practice_area_en = [
         link: '/practice-area/corporate-employment',
     },
     {
-        title: 'Ligitation & Dispute Resolution',
+        title: 'Litigation & Dispute Resolution',
         image: '/images/practice-area-2.jpeg',
         text: 'We are passionate to overcome the issue through practical and commercial solution. We help Our Clients in representing and/or accompanying during process of dispute resolution, whether through out of court settlement process and litigation process.',
-        link: '/practice-area/ligitation-dispute-resolution',
+        link: '/practice-area/litigation-dispute-resolution',
     },
     {
-        title: 'Commercial & Collection Bankruptcy',
+        title: 'Commercial Collection & Bankruptcy',
         image: '/images/practice-area-3.jpg',
         text: 'We understand that smooth cash flow is very important in business. Therefore We provide legal services for the field of Commercial Collection & Bankruptcy, to assist Our Clients in conducting collection process against Customers / Debtors both through outside and inside court approaches.',
         link: '/practice-area/commercial-collection-bankruptcy',
@@ -84,17 +84,17 @@ const lawyer_en = [
 const social = [
     {
         type: 'Whatsapp',
-        icon: <WhatsAppIcon style={{ fontSize: 60 }} />,
+        icon: <WhatsAppIcon style={{ fontSize: 40 }} />,
         link: '#'
     },
     {
         type: 'Instagram',
-        icon: <InstagramIcon style={{ fontSize: 60 }} />,
+        icon: <InstagramIcon style={{ fontSize: 40 }} />,
         link: 'https://instagram.com/navins.law?igshid=htad3gt4ltip'
     },
     {
         type: 'Linkedin',
-        icon: <LinkedInIcon style={{ fontSize: 60 }} />,
+        icon: <LinkedInIcon style={{ fontSize: 40 }} />,
         link: '#'
     }
 ]

@@ -50,7 +50,7 @@ const Address = () => {
                         <tbody>
                             <tr>
                                 <td><PhoneIcon /></td>
-                                <td><p>Phone : -</p></td>
+                                <td><p> -</p></td>
                             </tr>
                         </tbody>
                     </table>
@@ -60,7 +60,7 @@ const Address = () => {
                         <tbody>
                             <tr>
                                 <td><MailOutlineIcon /></td>
-                                <td><p>Email  : info@navinscounsellors.com</p></td>
+                                <td><p> info@navinscounsellors.com</p></td>
                             </tr>
                         </tbody>
                     </table>
@@ -70,7 +70,7 @@ const Address = () => {
                         <tbody>
                             <tr>
                                 <td><AccessAlarmIcon /></td>
-                                <td><p>Work Hour : Mon - Fri 09.00 - 17.00 </p></td>
+                                <td><p> Mon - Fri 09.00 - 17.00 </p></td>
                             </tr>
                         </tbody>
                     </table>
@@ -102,7 +102,7 @@ const Address = () => {
                         <tbody>
                             <tr>
                                 <td><MailOutlineIcon /></td>
-                                <td><p>Email : info@navinscounsellors.com </p></td>
+                                <td><p> info@navinscounsellors.com </p></td>
                             </tr>
                         </tbody>
                     </table>
@@ -112,7 +112,7 @@ const Address = () => {
                         <tbody>
                             <tr>
                                 <td><AccessAlarmIcon /></td>
-                                <td><p>Work Hour : Mon - Fri 09.00 - 17.00 </p></td>
+                                <td><p> Mon - Fri 09.00 - 17.00 </p></td>
                             </tr>
                         </tbody>
                     </table>

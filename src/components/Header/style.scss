@@ -41,6 +41,14 @@ header {
                         color: $color-6;
                     }
                 }
+
+                &.active {
+                    background: $color-1;
+                    
+                    & > * {
+                        color: $color-6;
+                    }
+                }
             }
 
             li > * {

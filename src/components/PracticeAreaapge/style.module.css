@@ -1,0 +1,64 @@
+.practiceAreapage .banner {
+  position: relative;
+}
+
+.practiceAreapage .banner .image img {
+  width: 100%;
+  height: 800px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.practiceAreapage .banner .layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.practiceAreapage .banner .caption {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 32px;
+}
+
+.practiceAreapage .banner .caption h1 {
+  padding: 0 18px;
+  color: #ffffff;
+  font-size: 80px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .practiceAreapage .banner .caption h1 {
+    font-size: 60px;
+  }
+}
+
+.practiceAreapage .content p {
+  padding: 120px 24px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .practiceAreapage .content {
+    padding: 0 15%;
+  }
+}
+/*# sourceMappingURL=style.module.css.map */

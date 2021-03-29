@@ -38,12 +38,12 @@
     
     img {
         width: 100vw;
-        height: 90vh;
+        height: 100%;
         object-fit: cover;
     }
     
     .caption {
-        // @include flexCenter();
+        @include flexCenter();
         @include postAbsolute();
 
         flex-direction: column;
@@ -54,7 +54,8 @@
         
         h1 {
             margin-bottom: 60px;
-            color: $color-8;
+            color: $color-3;
+            text-align: center;
         }
 
         span {
@@ -62,17 +63,18 @@
         }
 
         .contact-us {
-            background-color: $color-3;
-            border: solid 2px $color-8;
+            background-color: #3f75d18e;
+            border: solid 2px $color-1;
             padding: 18px 24px;
             font-size: 18px;
-            color: $color-8;
-            transition: background ease-in-out .2s;
+            color: $color-3;
+            transition: all ease-in-out .2s;
 
             &:hover {
-                background-color: $color-1;
+                background-color: $color-2;
                 border: solid 2px $color-1;
                 color: $color-3;
+                transform: translate(10px, -10px);
             }
 
             &:active {
@@ -106,6 +108,8 @@ section.about {
         & > div {
             margin-bottom: 12px;
         }
+        
+        padding: 0 12px;
     }
 
     background-color: $color-3;
@@ -163,6 +167,11 @@ section.practice-area {
     padding-top: 24px;
     padding-bottom: 24px;
 
+    @media screen and (max-width: $lg)
+    {
+        padding: 0 12px;
+    } 
+
     .items {
 
         display: grid;
@@ -188,30 +197,21 @@ section.practice-area {
             }
 
             .caption {
+                @include fullSize();
                 display: flex;
                 flex-direction: column;
                 
                 bottom: 0;
-                width: 100%;
-                height: 150px;
                 opacity: .9;
                 overflow: hidden;
-            }
-
-            .triangle {
-                width: 0;
-                height: 0;
-                border-top: 40px solid transparent;
-                border-right: 600px solid $color-1;
-                transition: border ease-in-out .2s;
             }
 
             .square {
                 @include fullSize();
                 @include flexCenter();
 
-                background-color: $color-2;
-                font-size: 20px;
+                background-color: rgba(0, 0, 0, .4);
+                font-size: 32px;
             }
 
 
@@ -297,7 +297,7 @@ section.lawyer {
     
                 // background-color: red;
                 .square-bottom {
-                    background-color: $color-2;
+                    background-color: $color-1;
                     width: 100%;
                     height: 40%;
                     padding: 12px;

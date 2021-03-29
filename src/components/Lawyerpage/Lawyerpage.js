@@ -1,18 +1,33 @@
-import React, { useEffect } from 'react'
-import './style.scss'
-
+import React, { useEffect, useContext } from 'react'
+import { linkStateContext } from '../Context/linkStateContext'
 import { Address, Copyright } from '../Footer/Footer'
 import { lawyer_en } from '../items'
+import MetaTags from 'react-meta-tags'
+import './style.scss'
 
 const Lawyerpage = ({ match: { params: { link } }}) => {
-
+    
+    const linkStateCtx = useContext(linkStateContext)
     useEffect(() => {
+        linkStateCtx.set({
+            home: '',
+            about: '',
+            practiceArea: '',
+            lawyer: 'active',
+            publications: '',
+            contactUs: '',
+        })
         window.scrollTo(0, 0)
     }, [])
     
     const lawyer = lawyer_en.find(item => item.link === '/lawyer/' + link) 
     return (
         <React.Fragment>
+            <MetaTags>
+                <title>Lawyer - {lawyer.name} | NAV|INS Co.</title>
+                <meta id="meta-description" name="description" content="NAV|INS Counsellors At Law - Navigating Your Legan Needs. Understanding deeply needs and interests of Our Clients is the way and approach that we take to provide legal services to Our Clients." />
+                <meta id="og-title" property="og:title" content="NAV|INS Co." />
+            </MetaTags>
             <div className="lawyerpage">
                 <div className="image">
                     <img src={ lawyer.image } alt={ lawyer.name } />
