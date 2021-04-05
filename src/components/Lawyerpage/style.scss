@@ -35,6 +35,10 @@
         .content {
             margin-bottom: 12px;
 
+            & > p {
+                text-align: justify;
+            }
+
             .title {
                 font-size: 18px;
                 font-weight: bold;

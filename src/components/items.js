@@ -109,6 +109,7 @@ const practice_area_id = [
                 karena itu untuk bidang ini, kami membantu klien kami dalam melakukan proses penagihan
                 terhadap customer/debitur dari klien kami baik melalui pendekatan di luar maupun di dalam
                 Pengadilan.`,
+        additional: [],
         link: '/practice-area/commercial-collection-bankruptcy',
     },
     {
@@ -116,6 +117,7 @@ const practice_area_id = [
         image: '/images/practice-area-4.jpg',
         text: `Di bidang tanah & property, kami membantu/mewakili klien kami dalam melakukan uji
                 tuntas hukum dan menangani sengketa atas tanah dan property.`,
+        additional: [],
         link: '/practice-area/land-property',
     }
 ]

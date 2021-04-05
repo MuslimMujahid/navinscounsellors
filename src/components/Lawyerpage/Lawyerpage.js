@@ -1,13 +1,15 @@
 import React, { useEffect, useContext } from 'react'
 import { linkStateContext } from '../Context/linkStateContext'
+import { languageContext } from '../Context/languageContext'
 import { Address, Copyright } from '../Footer/Footer'
-import { lawyer_en } from '../items'
+import { lawyer_en, lawyer_id } from '../items'
 import MetaTags from 'react-meta-tags'
 import './style.scss'
 
 const Lawyerpage = ({ match: { params: { link } }}) => {
     
     const linkStateCtx = useContext(linkStateContext)
+    const languageCtx = useContext(languageContext)
     useEffect(() => {
         linkStateCtx.set({
             home: '',
@@ -20,7 +22,8 @@ const Lawyerpage = ({ match: { params: { link } }}) => {
         window.scrollTo(0, 0)
     }, [])
     
-    const lawyer = lawyer_en.find(item => item.link === '/lawyer/' + link) 
+    const lawyer_data = languageCtx.lang === 'en' ? lawyer_en : lawyer_id
+    const lawyer = lawyer_data.find(item => item.link === '/lawyer/' + link) 
     return (
         <React.Fragment>
             <MetaTags>
@@ -48,7 +51,13 @@ const Lawyerpage = ({ match: { params: { link } }}) => {
                     }
                     </div>
                     <div className="content">
-                        <h3 className="title">Educational Background</h3>
+                        <h3 className="title">
+                        {
+                            languageCtx.lang === 'en' 
+                                ? 'Recent Education'
+                                : 'Pendidikan Terakhir'
+                        }
+                        </h3>
                         {
                             lawyer.education.map(item => 
                                 <p>{ item }</p>    
@@ -56,12 +65,46 @@ const Lawyerpage = ({ match: { params: { link } }}) => {
                         }
                     </div>
                     <div className="content">
-                        <h3 className="title">Language</h3>
+                        <h3 className="title">
+                        {
+                            languageCtx.lang === 'en' 
+                                ? 'Professional Organization'
+                                : 'Organisasi Profesi'
+                        }
+                        </h3>
+                        {
+                            lawyer.organization.map(item => 
+                                <p>{ item }</p>    
+                            )
+                        }
+                    </div>
+                    <div className="content">
+                        <h3 className="title">
+                        {
+                            languageCtx.lang === 'en' 
+                                ? 'Language'
+                                : 'Bahasa'
+                        }
+                        </h3>
                         {
                             lawyer.language.map(item => 
                                 <p>{ item }</p>    
                             )
                         }
+                    </div>
+                    <div className="content">
+                        <h3 className="title">Email</h3>
+                        <p>{lawyer.email}</p>
+                    </div>
+                    <div className="content">
+                        <h3 className="title">
+                        {
+                            languageCtx.lang === 'en' 
+                                ? 'Contact'
+                                : 'Kontak'
+                        }
+                        </h3>
+                        <p>{lawyer.contact}</p>
                     </div>
                 </div>
             </div>

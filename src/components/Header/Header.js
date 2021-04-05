@@ -3,15 +3,19 @@ import { Link } from 'react-router-dom'
 import { useSpring, animated } from 'react-spring'
 import MenuIcon from '@material-ui/icons/Menu'
 import { linkStateContext } from '../Context/linkStateContext'
+import { languageContext } from '../Context/languageContext'
 import './style.scss'
 
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import ArrowDropDownIcon  from '@material-ui/icons/ArrowDropDown';
+import LanguageIcon from '@material-ui/icons/Language';
+import CheckIcon from '@material-ui/icons/Check';
 
 const Header = () => {
 
     const [{y}, set] = useSpring(() => ({y: -150}))
     const [layer, setLayer] = useState(false)
     const linkStateCtx = useContext(linkStateContext)
+    const languageCtx = useContext(languageContext)
 
     return (
         <header>
@@ -52,6 +56,29 @@ const Header = () => {
                     </li>
                     <li className={linkStateCtx.state.contactUs}>
                         <Link to="/contact-us">Contact Us</Link>
+                    </li>
+                    <li className="link-extended">
+                        <div>
+                            <LanguageIcon />
+                            <ArrowDropDownIcon />
+                        </div>
+                        <ul className="sub-links">
+                            
+                            <li onClick={() => languageCtx.setLang('id')}>
+                                ID 
+                                {
+                                    languageCtx.lang === 'id'
+                                        && <CheckIcon style={{ fontSize: 20 }} /> 
+                                }
+                            </li>
+                            <li onClick={() => languageCtx.setLang('en')}>
+                                EN
+                                {
+                                    languageCtx.lang === 'en'
+                                        && <CheckIcon style={{ fontSize: 20 }} /> 
+                                }
+                            </li>
+                        </ul>
                     </li>
                 </ul>
                 <div className="menu-button">

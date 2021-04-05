@@ -8,6 +8,7 @@ import Lawyerpage from './components/Lawyerpage/Lawyerpage'
 import PracticeAreapage from './components/PracticeAreaapge/PracticeAreapage'
 import ContactUspage from './components/ContactUspage/ContactUspage'
 import { linkStateContext } from './components/Context/linkStateContext'
+import { languageContext } from './components/Context/languageContext'
 
 function App() {
 
@@ -20,18 +21,22 @@ function App() {
     contactUs: '',
   })
 
+  const [lang, setLang] = useState('en')
+
   return (
     <div className="App">
       <Router>
-        <linkStateContext.Provider value={{state: linkState, set: setLinkState}}>
-          <Header />
-          <Switch>
-            <Route path="/" component={Homepage} exact />
-            <Route path="/lawyer/:link" component={Lawyerpage} />
-            <Route path="/practice-area/:link" component={PracticeAreapage} />
-            <Route path="/contact-us" component={ContactUspage} />
-          </Switch>
-        </linkStateContext.Provider>
+        <languageContext.Provider value={{lang: lang, setLang: setLang}}>
+          <linkStateContext.Provider value={{state: linkState, set: setLinkState}}>
+            <Header />
+            <Switch>
+              <Route path="/" component={Homepage} exact />
+              <Route path="/lawyer/:link" component={Lawyerpage} />
+              <Route path="/practice-area/:link" component={PracticeAreapage} />
+              <Route path="/contact-us" component={ContactUspage} />
+            </Switch>
+          </linkStateContext.Provider>
+        </languageContext.Provider>
       </Router>
     </div>
   );

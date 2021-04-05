@@ -88,6 +88,11 @@ header {
                 padding: 12px 12px;
                 background: $color-4;
                 border-left: solid 4px $color-1;
+                color: $color-1;
+
+                &:hover {
+                    color: $color-6;
+                }
             }
 
             .menu-button {

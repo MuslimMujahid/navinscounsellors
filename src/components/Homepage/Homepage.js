@@ -3,10 +3,12 @@ import AliceCarousel from 'react-alice-carousel';
 import { Link } from 'react-router-dom'
 import { linkStateContext } from '../Context/linkStateContext'
 import 'react-alice-carousel/lib/alice-carousel.css';
-import { practice_area_en, lawyer_en } from '../items'
+import { about_en, about_id, practice_area_en, practice_area_id, lawyer_en } from '../items'
 import LawyerCarouselItem from './LawyerCarouselItem'
 import { Address, Copyright } from '../Footer/Footer'
 import SectionTitle from '../SectionTitle/SectionTitle'
+import { languageContext } from '../Context/languageContext'
+
 import MetaTags from 'react-meta-tags'
 import './style.scss'
 
@@ -23,6 +25,12 @@ const lawyer_carousel_items = lawyer_en.map(item =>
 const Homepage = () => {
 
     const linkStateCtx = useContext(linkStateContext)
+    const languageCtx = useContext(languageContext)
+
+    const lang = languageCtx.lang
+    const about_data = lang === 'en' ? about_en : about_id
+    const practice_area_data = lang === 'en' ? practice_area_en : practice_area_id
+
     useEffect(() => {
         window.scrollTo(0, 0);
         linkStateCtx.set({
@@ -50,7 +58,7 @@ const Homepage = () => {
 
                         {/* Contact us button */}
                         <Link to="/contact-us" className="contact-us">
-                            Contact Us
+                            { (lang === 'en'? 'Contact Us':'Kontak Kami')}
                         </Link>
                     </div>
 
@@ -65,10 +73,8 @@ const Homepage = () => {
                             <img src="/images/building1-min.jpg" alt="What is NAV|INS Co. ?"/>
                         </div>
                         <div className="caption">
-                            <h3>What is NAV|INS Co. ?</h3>
-                            <p>
-                                NAV|INS Co. is a Law Office established and located in Indonesia. We have professional Lawyers with depth of knowledge and experience in their respective field. Understanding deeply the needs and interests of Our Clients is the way and approach that We take to provide legal services to Our Clients.
-                            </p>
+                            <h3>{ (lang === 'en' ? 'What is NAV|INS Co. ?':'Apa itu NAV|INS Co.?')}</h3>
+                            <p>{ about_data[0] }</p>
                         </div>
                         <div className="layer"></div>
                     </div>
@@ -77,10 +83,8 @@ const Homepage = () => {
                             <img src="/images/building2-min.jpg" alt="Why NAV|INS Co."/>
                         </div>
                         <div className="caption">
-                            <h3>Why NAV|INS Co.?</h3>
-                            <p>
-                                We understand that Client’s Legal needs and interests are essential. Therefore, we always give Great Legal Teams who are creative, strong, and expert in their field, in order to be able to provide legal services to Our Clients professionally, in the basis of applicable regulations.
-                            </p>
+                            <h3>{ (lang === 'en' ? 'Why NAV|INS Co. ?' : 'Mengapa NAV|INS Co. ?') }</h3>
+                            <p>{ about_data[1] }</p>
                         </div>
                         <div className="layer"></div>
                     </div>
@@ -92,7 +96,7 @@ const Homepage = () => {
                     <SectionTitle title="Our Practice Area" />
                     <ul className="items">
                     {
-                        practice_area_en.map(item => 
+                        practice_area_data.map(item => 
                             <li key={item.link}>
                                 <Link to={item.link}>
                                     <div className="image">

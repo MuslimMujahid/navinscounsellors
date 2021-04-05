@@ -1,13 +1,15 @@
 import React, { useEffect, useContext } from 'react'
 import { Address, Copyright } from '../Footer/Footer'
-import { practice_area_en } from '../items' 
+import { practice_area_en, practice_area_id } from '../items' 
 import { linkStateContext } from '../Context/linkStateContext'
+import { languageContext } from '../Context/languageContext'
 import MetaTags from 'react-meta-tags'
 import styles from './style.module.scss'
 
 function PracticeAreapage({ match: { params: { link } }}) {
     
     const linkStateCtx = useContext(linkStateContext)
+    const languageCtx = useContext(languageContext)
     useEffect(() => {
         window.scrollTo(0, 0);
         linkStateCtx.set({
@@ -20,7 +22,8 @@ function PracticeAreapage({ match: { params: { link } }}) {
         })
     }, [])
     
-    const data = practice_area_en.find(item => item.link === '/practice-area/' + link)
+    const practice_area_data = (languageCtx.lang === 'en') ? practice_area_en : practice_area_id 
+    const data = practice_area_data.find(item => item.link === '/practice-area/' + link)
     return (
         <React.Fragment>
             <MetaTags>
