@@ -41,13 +41,43 @@
     .content {
         
         p {
-            padding: 120px 24px;
             font-size: 18px;
             line-height: 24px;
         }
 
+        li {
+            list-style: circle;
+        }
+
+        tr {
+            padding: 30px;
+        }
+
+        td {
+            padding-bottom: 20px;
+        }
+
+        td:first-child {
+            display: flex;
+            margin-top: 6px;
+        }
+
+        td:last-child {
+            padding-left: 8px;
+        }
+
+        .mainText {
+            margin-bottom: 18px;
+        }
+        .circle {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: black;
+        }
+
         @media screen and (min-width: $md) {
-            padding: 0 15%;
+            padding: 120px 15%;
         }
     }
 }

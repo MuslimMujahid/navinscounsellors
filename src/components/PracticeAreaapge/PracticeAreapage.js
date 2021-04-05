@@ -42,7 +42,19 @@ function PracticeAreapage({ match: { params: { link } }}) {
 
                 {/* Cntent */}
                 <div className={styles.content}>
-                    <p>{ data.text }</p>
+                    <p className={styles.mainText}>{ data.text }</p>
+                    <table>
+                    {
+                        data.additional.map(item => 
+                            <React.Fragment>
+                                <tr className={styles.additional}>
+                                    <td><div className={styles.circle}></div></td>
+                                    <td><p>{item}</p></td>
+                                </tr>
+                            </React.Fragment>
+                        )
+                    }
+                    </table>
                 </div>
 
                 {/* Footer */}

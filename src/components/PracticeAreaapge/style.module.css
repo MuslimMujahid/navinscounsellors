@@ -51,14 +51,43 @@
 }
 
 .practiceAreapage .content p {
-  padding: 120px 24px;
   font-size: 18px;
   line-height: 24px;
 }
 
+.practiceAreapage .content li {
+  list-style: circle;
+}
+
+.practiceAreapage .content tr {
+  padding: 30px;
+}
+
+.practiceAreapage .content td:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 6px;
+}
+
+.practiceAreapage .content td:last-child {
+  padding-left: 8px;
+}
+
+.practiceAreapage .content .mainText {
+  margin-bottom: 18px;
+}
+
+.practiceAreapage .content .circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: black;
+}
+
 @media screen and (min-width: 768px) {
   .practiceAreapage .content {
-    padding: 0 15%;
+    padding: 120px 15%;
   }
 }
 /*# sourceMappingURL=style.module.css.map */
