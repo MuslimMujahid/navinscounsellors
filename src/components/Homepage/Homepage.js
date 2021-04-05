@@ -44,7 +44,7 @@ const Homepage = () => {
             </MetaTags>
             <div className="homepage">
                 <div className="hero">
-                    <img src="./images/banner.jpg" alt="Navigating Your Legal Needs"/>
+                    <img src="./images/banner-min.jpg" alt="Navigating Your Legal Needs"/>
                     <div className="caption">
                         <h1>Navigating Your Legal Needs</h1>
 
@@ -62,7 +62,7 @@ const Homepage = () => {
                 <section className="about">
                     <div className="first-col">
                         <div className="image">
-                            <img src="/images/building1.jpg" alt="What is NAV|INS Co. ?"/>
+                            <img src="/images/building1-min.jpg" alt="What is NAV|INS Co. ?"/>
                         </div>
                         <div className="caption">
                             <h3>What is NAV|INS Co. ?</h3>
@@ -74,7 +74,7 @@ const Homepage = () => {
                     </div>
                     <div className="second-col">
                         <div className="image">
-                            <img src="/images/building2.jpg" alt="Why NAV|INS Co."/>
+                            <img src="/images/building2-min.jpg" alt="Why NAV|INS Co."/>
                         </div>
                         <div className="caption">
                             <h3>Why NAV|INS Co.?</h3>
