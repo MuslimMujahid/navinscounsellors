@@ -209,6 +209,21 @@ const lawyer_en = [
         contact: '021 - 299112275',
         image: '/images/lawyer-4.jpg',
         link: '/lawyer/fanny-jenifer-sh',
+    },
+    {
+        name: 'Hana Oktaviandri, S.H.',
+        role: 'Associate Lawyer',
+        desc: [
+            `Hana is Associate of NAV|INS Co. Her expertise includes commercial contract drafting, foreign
+            investment, merger and acquisition, general corporate and commercial matters.`
+        ],
+        education: ['Bachelor Degree of Law, University of Indonesia'],
+        organization: ['Perhimpunan Advokat Indonesia (PERADI)'],
+        language: ['Indonesia', 'Inggris'],
+        email: 'hana@navinscounsellors.com',
+        contact: '021 - 299112275',
+        image: '/images/lawyer-5.jpg',
+        link: '/lawyer/hana-oktaviandri-sh',
     }
 ]
 
@@ -298,6 +313,21 @@ const lawyer_id = [
         contact: '021 - 299112275',
         image: '/images/lawyer-4.jpg',
         link: '/lawyer/fanny-jenifer-sh',
+    },
+    {
+        name: 'Hana Oktaviandri, S.H.',
+        role: 'Associate Lawyer',
+        desc: [
+            `Hana adalah Associate dari NAV|INS Co. Bidang keahliannya meliputi drafting perjanjian
+            komersial, investasi asing, merger dan akuisisi, persoalan perusahaan umum dan perdagangan.`
+        ],
+        education: ['Sarjana Hukum, Universitas Indonesia'],
+        organization: ['Perhimpunan Advokat Indonesia (PERADI)'],
+        language: ['Indonesia', 'Inggris'],
+        email: 'hana@navinscounsellors.com',
+        contact: '021 - 299112275',
+        image: '/images/lawyer-5.jpg',
+        link: '/lawyer/hana-oktaviandri-sh',
     }
 ]
 
