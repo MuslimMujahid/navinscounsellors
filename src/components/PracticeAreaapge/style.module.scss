@@ -32,7 +32,7 @@
                 text-align: center;
 
                 @media screen and (max-width: $md) {
-                    font-size: 60px;
+                    font-size: 40px;
                 }
             }
         }
@@ -43,6 +43,8 @@
         p {
             font-size: 18px;
             line-height: 24px;
+            font-family: 'Times New Roman', Times, serif;
+            color: rgb(78, 78, 78)
         }
 
         li {
@@ -74,6 +76,10 @@
             height: 8px;
             border-radius: 50%;
             background-color: black;
+        }
+
+        @media screen and (max-width: $md) {
+            padding: 24px 24px;
         }
 
         @media screen and (min-width: $md) {
