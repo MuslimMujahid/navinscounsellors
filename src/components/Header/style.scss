@@ -75,17 +75,11 @@ header {
         }
 
         .sub-links {
-            @include postAbsolute();
             
-            display: none;
-            top: 100%;
-            left: 0;    
-            width: 150%;
             
             li {
                 @include flexCenter();
                 
-                padding: 12px 12px;
                 background: $color-4;
                 border-left: solid 4px $color-1;
                 color: $color-1;
@@ -99,6 +93,18 @@ header {
                 > * {
                     background-color: $color-8;
                 }
+            }
+
+            @media screen and (min-width: $lg) {
+                @include postAbsolute();
+                // display: none;
+                top: 100%;
+                left: 0;    
+                width: 150%;
+            }
+
+            @media screen and (min-width: $md) {
+                display: none;
             }
         }
 

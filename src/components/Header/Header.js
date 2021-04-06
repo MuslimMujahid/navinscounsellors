@@ -17,6 +17,9 @@ const Header = () => {
     const linkStateCtx = useContext(linkStateContext)
     const languageCtx = useContext(languageContext)
 
+    const [extendMobileLanguage, setExtendMobileLanguage] = useState(false)
+    const [extendMobilePublications, setExtendMobilePublications] = useState(false)
+
     return (
         <header>
             <div className="email">
@@ -106,23 +109,51 @@ const Header = () => {
                     <li>
                         <Link to="/lawyer">Lawyer</Link>
                     </li>
-                    <li className="link-extended">
+                    <li className="link-extended" onClick={() => setExtendMobilePublications(!extendMobilePublications)}>
                         <div>
                             Publications
                             <ArrowDropDownIcon fontSize="small"/>
                         </div>
-                        <ul className="sub-links">
+                        {
+                            extendMobilePublications &&
+                            <ul className="sub-links">
                             
-                            <li>
-                                <Link to="/articles">Articles</Link>
-                            </li>
-                            <li>
-                                <Link to="/career">Career</Link>
-                            </li>
-                        </ul>
+                                <li>
+                                    <Link to="/articles">Articles</Link>
+                                </li>
+                                <li>
+                                    <Link to="/career">Career</Link>
+                                </li>
+                            </ul>
+                        }
                     </li>
                     <li>
                         <Link to="/contact-us">Contact Us</Link>
+                    </li>
+                    <li className="link-extended" onClick={() => setExtendMobileLanguage(!extendMobileLanguage)}>
+                        <div>
+                            <LanguageIcon />
+                            <ArrowDropDownIcon />
+                        </div>
+                        {
+                            extendMobileLanguage &&
+                            <ul className="sub-links">
+                                <li onClick={() => languageCtx.setLang('id')}>
+                                    ID 
+                                    {
+                                        languageCtx.lang === 'id'
+                                            && <CheckIcon style={{ fontSize: 20 }} /> 
+                                    }
+                                </li>
+                                <li onClick={() => languageCtx.setLang('en')}>
+                                    EN
+                                    {
+                                        languageCtx.lang === 'en'
+                                            && <CheckIcon style={{ fontSize: 20 }} /> 
+                                    }
+                                </li>
+                            </ul>
+                        }
                     </li>
                 </animated.ul>
             </nav>
@@ -132,6 +163,8 @@ const Header = () => {
                     onClick={() => {
                         set({y: (-1 * (y.getValue()+150))})
                         setLayer(!layer)
+                        setExtendMobileLanguage(false)
+                        setExtendMobilePublications(false)
                     }}
                 ></div>}
         </header>

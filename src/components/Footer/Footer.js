@@ -34,11 +34,14 @@ const Address = () => {
                                 <tr>
                                     <td><RoomIcon/></td>
                                     <td>
+                                        <span className="locality">Epicentrum Walk Lantai 3 Suite A306-307</span>
+                                        <span>Kawasan Rasuan Episentrum</span>  
                                         <span className="street-address">Jl. H.R. Rasuna Said, Kuningan</span>
-                                        <span className="locality">Epicentrum Walk Lantai 3 Suite A306-307</span>  
-                                        <span className="region">Jakarta Selatan</span>
-                                        <span className="postal-code">12940</span>
-                                        <span className="country-name">Indonesia</span>
+                                        <div>
+                                            <span className="region">Jakarta Selatan</span>
+                                            <span className="postal-code">12940</span>
+                                        </div>
+                                        {/* <span className="country-name">Indonesia</span> */}
                                     </td>
                                 </tr>
                             </tbody>
@@ -50,7 +53,7 @@ const Address = () => {
                         <tbody>
                             <tr>
                                 <td><PhoneIcon /></td>
-                                <td><p> -</p></td>
+                                <td><p> 021-299112275</p></td>
                             </tr>
                         </tbody>
                     </table>
@@ -86,13 +89,25 @@ const Address = () => {
                                 <td><RoomIcon /></td>
                                 <td>
                                     <span className="adr">
-                                        <span className="street-address">Jl. Urip Sumohardjo No. 20</span>
                                         <span className="locality">Gedung Graha Pena Lantai 5 Kav.507</span>  
-                                        <span className="region">Makassar</span>
-                                        <span className="postal-code">90234</span>
-                                        <span className="country-name">Indonesia</span>
+                                        <span className="street-address">Jl. Urip Sumohardjo No. 20</span>
+                                        <div>
+                                            <span className="region">Makassar</span>
+                                            <span className="postal-code">90234</span>
+                                        </div>
+                                        {/* <span className="country-name">Indonesia</span> */}
                                     </span>
                                 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </address>
+                <address className="content-item">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><PhoneIcon /></td>
+                                <td><p> 021-299112275</p></td>
                             </tr>
                         </tbody>
                     </table>

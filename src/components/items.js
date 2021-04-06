@@ -151,7 +151,7 @@ const lawyer_en = [
         link: '/lawyer/muh-naim-syahrir-sh-mh',
     },
     {
-        name: 'Febrian Yanata Putra, S.H., M.H.',
+        name: 'Febriyan Yanata Putra, S.H., M.H.',
         role: 'Partner',
         desc: [
             `Febriyan is a Partner of NAV|INS Co. His expertise includes litigation, bankruptcy, dispute
@@ -197,7 +197,7 @@ const lawyer_en = [
     },
     {
         name: 'Fanny Jenifer, S.H.',
-        role: 'Associate Lawyer',
+        role: 'Associate',
         desc: [
             `Fanny is Associate of NAV|INS Co. Her expertise includes general corporate, employment,
             merger and acquisition, investment, legal compliance and cyber.`
@@ -212,7 +212,7 @@ const lawyer_en = [
     },
     {
         name: 'Hana Oktaviandri, S.H.',
-        role: 'Associate Lawyer',
+        role: 'Associate',
         desc: [
             `Hana is Associate of NAV|INS Co. Her expertise includes commercial contract drafting, foreign
             investment, merger and acquisition, general corporate and commercial matters.`
@@ -256,7 +256,7 @@ const lawyer_id = [
         link: '/lawyer/muh-naim-syahrir-sh-mh',
     },
     {
-        name: 'Febrian Yanata Putra, S.H., M.H.',
+        name: 'Febriyan Yanata Putra, S.H., M.H.',
         role: 'Partner',
         desc: [
             `Febriyan adalah Partner NAV|INS Co. Bidang keahliannya meliputi litigasi, kepailitan,
@@ -301,7 +301,7 @@ const lawyer_id = [
     },
     {
         name: 'Fanny Jenifer, S.H.',
-        role: 'Associate Lawyer',
+        role: 'Associate',
         desc: [
             `Fanny adalah Associate dari NAV|INS Co. Bidang keahliannya meliputi persoalan perusahaan
             umum, ketenagakerjaan, merger dan akuisisi, investasi, kepatuhan hukum dan siber.`
@@ -316,7 +316,7 @@ const lawyer_id = [
     },
     {
         name: 'Hana Oktaviandri, S.H.',
-        role: 'Associate Lawyer',
+        role: 'Associate',
         desc: [
             `Hana adalah Associate dari NAV|INS Co. Bidang keahliannya meliputi drafting perjanjian
             komersial, investasi asing, merger dan akuisisi, persoalan perusahaan umum dan perdagangan.`
