@@ -7,6 +7,7 @@ import { about_en, about_id, practice_area_en, practice_area_id, lawyer_en } fro
 import LawyerCarouselItem from './LawyerCarouselItem'
 import { Address, Copyright } from '../Footer/Footer'
 import SectionTitle from '../SectionTitle/SectionTitle'
+import AboutSection from '../AboutSection/AboutSection'
 import { languageContext } from '../Context/languageContext'
 
 import MetaTags from 'react-meta-tags'
@@ -28,7 +29,6 @@ const Homepage = () => {
     const languageCtx = useContext(languageContext)
 
     const lang = languageCtx.lang
-    const about_data = lang === 'en' ? about_en : about_id
     const practice_area_data = lang === 'en' ? practice_area_en : practice_area_id
 
     useEffect(() => {
@@ -67,28 +67,7 @@ const Homepage = () => {
                 </div>
                 
                 {/* Start of about section */}
-                <section className="about">
-                    <div className="first-col">
-                        <div className="image">
-                            <img src="/images/building1-min.jpg" alt="What is NAV|INS Co. ?"/>
-                        </div>
-                        <div className="caption">
-                            <h3>{ (lang === 'en' ? 'What is NAV|INS Co. ?':'Apa itu NAV|INS Co.?')}</h3>
-                            <p>{ about_data[0] }</p>
-                        </div>
-                        <div className="layer"></div>
-                    </div>
-                    <div className="second-col">
-                        <div className="image">
-                            <img src="/images/building2-min.jpg" alt="Why NAV|INS Co."/>
-                        </div>
-                        <div className="caption">
-                            <h3>{ (lang === 'en' ? 'Why NAV|INS Co. ?' : 'Mengapa NAV|INS Co. ?') }</h3>
-                            <p>{ about_data[1] }</p>
-                        </div>
-                        <div className="layer"></div>
-                    </div>
-                </section>
+                <AboutSection />
                 {/* End of about section */}
 
                 {/* Start of practice area section */}

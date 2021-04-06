@@ -4,6 +4,7 @@ import './App.css';
 
 import Header from './components/Header/Header'
 import Homepage from './components/Homepage/Homepage'
+import Aboutpage from './components/Aboutpage/Aboutpage'
 import Lawyerpage from './components/Lawyerpage/Lawyerpage'
 import PracticeAreapage from './components/PracticeAreaapge/PracticeAreapage'
 import ContactUspage from './components/ContactUspage/ContactUspage'
@@ -34,6 +35,7 @@ function App() {
               <Route path="/lawyer/:link" component={Lawyerpage} />
               <Route path="/practice-area/:link" component={PracticeAreapage} />
               <Route path="/contact-us" component={ContactUspage} />
+              <Route path="/about" component={Aboutpage} />
             </Switch>
           </linkStateContext.Provider>
         </languageContext.Provider>
