@@ -7,6 +7,7 @@ import Homepage from './components/Homepage/Homepage'
 import Aboutpage from './components/Aboutpage/Aboutpage'
 import Lawyerpage from './components/Lawyerpage/Lawyerpage'
 import PracticeAreapage from './components/PracticeAreaapge/PracticeAreapage'
+import PracticeAreaPage from './components/PracticeAreaPage/PracticeAreaPage'
 import ContactUspage from './components/ContactUspage/ContactUspage'
 import { linkStateContext } from './components/Context/linkStateContext'
 import { languageContext } from './components/Context/languageContext'
@@ -33,6 +34,7 @@ function App() {
             <Switch>
               <Route path="/" component={Homepage} exact />
               <Route path="/lawyer/:link" component={Lawyerpage} />
+              <Route path="/practice-area" component={PracticeAreaPage} />
               <Route path="/practice-area/:link" component={PracticeAreapage} />
               <Route path="/contact-us" component={ContactUspage} />
               <Route path="/about" component={Aboutpage} />

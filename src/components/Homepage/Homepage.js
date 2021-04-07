@@ -3,11 +3,12 @@ import AliceCarousel from 'react-alice-carousel';
 import { Link } from 'react-router-dom'
 import { linkStateContext } from '../Context/linkStateContext'
 import 'react-alice-carousel/lib/alice-carousel.css';
-import { about_en, about_id, practice_area_en, practice_area_id, lawyer_en } from '../items'
+import { lawyer_en } from '../items'
 import LawyerCarouselItem from './LawyerCarouselItem'
 import { Address, Copyright } from '../Footer/Footer'
 import SectionTitle from '../SectionTitle/SectionTitle'
 import AboutSection from '../AboutSection/AboutSection'
+import PracticeAreaSection from '../PracticeAreaSection/PracticeAreaSection'
 import { languageContext } from '../Context/languageContext'
 
 import MetaTags from 'react-meta-tags'
@@ -29,7 +30,6 @@ const Homepage = () => {
     const languageCtx = useContext(languageContext)
 
     const lang = languageCtx.lang
-    const practice_area_data = lang === 'en' ? practice_area_en : practice_area_id
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -71,27 +71,7 @@ const Homepage = () => {
                 {/* End of about section */}
 
                 {/* Start of practice area section */}
-                <section className="practice-area">
-                    <SectionTitle title="Our Practice Area" />
-                    <ul className="items">
-                    {
-                        practice_area_data.map(item => 
-                            <li key={item.link}>
-                                <Link to={item.link}>
-                                    <div className="image">
-                                        <img src={item.image} alt={item.title} />
-                                    </div>
-                                    <div className="caption">
-                                        <div className="square">
-                                            { item.title }
-                                        </div>
-                                    </div>
-                                </Link>
-                            </li>
-                        )
-                    }
-                    </ul>
-                </section>
+                <PracticeAreaSection />
                 {/* End of practice area section */}
 
                 {/* Start of lawyer section */}

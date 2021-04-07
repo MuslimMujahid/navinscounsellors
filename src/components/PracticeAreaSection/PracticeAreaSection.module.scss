@@ -1,0 +1,109 @@
+@import '../common';
+
+section.PracticeAreaSection {
+
+    background-color: $color-4;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    @media screen and (max-width: $lg)
+    {
+        padding: 0 12px;
+    } 
+
+    .items {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 12px;
+
+        li {
+            position: relative;
+            overflow: hidden;
+        
+            img {
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+                object-position: center;
+                transition: all ease-in-out .2s;
+            }
+    
+            .caption {
+                position: absolute;
+                text-align: center;
+                color: $color-6;
+            }
+
+            .caption {
+                @include fullSize();
+                display: flex;
+                flex-direction: column;
+                
+                bottom: 0;
+                opacity: .9;
+                overflow: hidden;
+            }
+
+            .square {
+                @include fullSize();
+                @include flexCenter();
+
+                background-color: rgba(0, 0, 0, .4);
+                font-size: 32px;
+            }
+
+
+            &:hover {
+                img {
+                    width: 140%;
+                }
+
+                .caption {
+                    .triangle {
+                        border-top: 80px solid transparent;
+                        border-right: 400px solid $color-1;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: $lg) {
+        .items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+    }
+
+    @media screen and (max-width: $md) {
+        .items {
+            display: block;
+
+            li {
+                img {
+                    height: 200px;
+                }
+            }
+
+            .caption {
+                top: 0;
+                width: 100%;
+                height: 100%;
+                // background: red;
+                font-size: 24px;
+                text-transform: uppercase;
+
+                .triangle {
+                    display: none;
+                }
+    
+                .square {
+                    @include flexCenter();
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
