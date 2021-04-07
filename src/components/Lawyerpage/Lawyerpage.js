@@ -11,6 +11,7 @@ const Lawyerpage = ({ match: { params: { link } }}) => {
     const linkStateCtx = useContext(linkStateContext)
     const languageCtx = useContext(languageContext)
     useEffect(() => {
+        window.scrollTo(0, 0);
         linkStateCtx.set({
             home: '',
             about: '',

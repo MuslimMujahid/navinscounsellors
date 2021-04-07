@@ -1,0 +1,106 @@
+@import '../common';
+
+section.LawyerSection {
+    .lawyerCarouselItem {
+        padding: 0 6px;
+
+        & > div {
+            position: relative;
+            
+            img {
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+                object-position: center;
+                // border-bottom: solid 12px $color-2;
+            }
+    
+            .squares {
+                @include postAbsolute();
+                @include fullSize();
+                @include flexCenter();
+                flex-direction: column;
+                align-items: flex-end;
+    
+                // background-color: red;
+                .squareBottom {
+                    background-color: $color-1;
+                    width: 100%;
+                    height: 40%;
+                    padding: 12px;
+
+                    .name, .role {
+                        width: 100%;
+                        text-align: center;
+                        font-size: 14px;
+                        color: $color-6;
+                        transition: padding ease-in-out .2s;
+                    }
+
+                    .role, .linkButton {
+                        display: none;
+                    }
+                }
+
+                .squareTop {
+                    @include postAbsolute();
+
+                    background-color: $color-4;
+                    width: 100%;
+                    height: 100%;
+
+                }
+
+                &:hover {
+                    .squareBottom {
+                        .name {
+                            padding: 12px 0 5px 0;
+                            border-bottom: solid 2px $color-6;
+                        }
+
+                        .role, .linkButton {
+                            display: block;
+                        }
+
+                        .role {
+                            padding: 5px;
+                            font-weight: 100;
+                        }
+
+                        & > div {
+                            @include flexCenter();
+
+                            padding: 12px;
+
+                            .linkButton {
+                                @include flexCenter();
+    
+                                background-color: $color-4;
+                                border-radius: 50%;
+                                width: 50px;
+                                height: 50px;
+                                transition: background ease-in-out .2s;
+
+                                &:hover {
+                                    background-color: $color-1;
+                                    color: $color-6;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+
+            .Link {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: transparent;
+                z-index: 40;
+            }
+        }
+    }
+}

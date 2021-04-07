@@ -1,0 +1,11 @@
+@import '../common';
+
+.LawyerPage {
+    padding-top: 140px;
+    
+    @media screen and (min-width: $md) {
+        & > section {
+            padding: 0 15%;
+        }
+    }
+}

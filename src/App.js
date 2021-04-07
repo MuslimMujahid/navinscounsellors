@@ -6,6 +6,7 @@ import Header from './components/Header/Header'
 import Homepage from './components/Homepage/Homepage'
 import Aboutpage from './components/Aboutpage/Aboutpage'
 import Lawyerpage from './components/Lawyerpage/Lawyerpage'
+import LawyerPage_ from './components/LawyerPage_/LawyerPage'
 import PracticeAreapage from './components/PracticeAreaapge/PracticeAreapage'
 import PracticeAreaPage from './components/PracticeAreaPage/PracticeAreaPage'
 import ContactUspage from './components/ContactUspage/ContactUspage'
@@ -33,6 +34,7 @@ function App() {
             <Header />
             <Switch>
               <Route path="/" component={Homepage} exact />
+              <Route path="/lawyer" component={LawyerPage_} exact />
               <Route path="/lawyer/:link" component={Lawyerpage} />
               <Route path="/practice-area" component={PracticeAreaPage} />
               <Route path="/practice-area/:link" component={PracticeAreapage} />

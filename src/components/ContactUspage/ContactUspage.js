@@ -7,6 +7,7 @@ import styles from './style.module.scss'
 function ContactUspage() {
     const linkStateCtx = useContext(linkStateContext)
     useEffect(() =>  {
+        window.scrollTo(0, 0);
         linkStateCtx.set({
             home: '',
             about: '',

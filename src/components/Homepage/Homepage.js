@@ -1,28 +1,15 @@
 import React, { useEffect, useContext } from 'react'
-import AliceCarousel from 'react-alice-carousel';
 import { Link } from 'react-router-dom'
 import { linkStateContext } from '../Context/linkStateContext'
 import 'react-alice-carousel/lib/alice-carousel.css';
-import { lawyer_en } from '../items'
-import LawyerCarouselItem from './LawyerCarouselItem'
 import { Address, Copyright } from '../Footer/Footer'
-import SectionTitle from '../SectionTitle/SectionTitle'
 import AboutSection from '../AboutSection/AboutSection'
 import PracticeAreaSection from '../PracticeAreaSection/PracticeAreaSection'
+import LawyerSection from '../LawyerSection/LawyerSection'
 import { languageContext } from '../Context/languageContext'
 
 import MetaTags from 'react-meta-tags'
 import './style.scss'
-
-const handleDragStart = (e) => e.preventDefault();
-
-// This items goes to the lawyer section
-const lawyer_carousel_items = lawyer_en.map(item => 
-    <LawyerCarouselItem 
-        item={item} 
-        handleDragStart={handleDragStart} 
-    />
-)
 
 const Homepage = () => {
 
@@ -65,37 +52,15 @@ const Homepage = () => {
                     {/* Black Layer */}
                     <div className="layer"></div>
                 </div>
-                
-                {/* Start of about section */}
+
                 <AboutSection />
-                {/* End of about section */}
-
-                {/* Start of practice area section */}
                 <PracticeAreaSection />
-                {/* End of practice area section */}
+                <LawyerSection />
 
-                {/* Start of lawyer section */}
-                <section className="lawyer">
-                    <SectionTitle title="Our Legal Team" />
-                    <AliceCarousel 
-                        mouseTracking 
-                        items={lawyer_carousel_items}
-                        autoPlay={true}
-                        responsive= {{ 0 : { items: 1 }, 768 : { items: 2 }, 1224 : { items: 4 }}}
-                        infinite={true}
-                        animationDuration={1000}
-                        autoPlayInterval={2000}
-                    />
-                </section>
-
-                {/* End of lawyer section */}
-                
-                {/* Start of footer */}
                 <footer>
                     <Address />
                     <Copyright />
                 </footer>
-                {/* End of footer */}
             </div>
         </React.Fragment>
     )
