@@ -2,12 +2,18 @@ import React, { useEffect, useContext } from 'react'
 import MetaTags from 'react-meta-tags'
 import AboutSection from '../AboutSection/AboutSection'
 import { linkStateContext } from '../Context/linkStateContext'
+import { mobileMenuContext } from '../Context/mobileMenuContext'
+import { layerContext } from '../Context/layerContext'
+
 import { Address, Copyright } from '../Footer/Footer'
 import styles from './Aboutpage.module.scss'
 
 export default function AboutPage() {
 
     const linkStateCtx = useContext(linkStateContext)
+    const mobileMenuCtx = useContext(mobileMenuContext)
+    const layerCtx = useContext(layerContext)
+
     useEffect(() => {
         window.scrollTo(0, 0);
         linkStateCtx.set({
@@ -18,6 +24,8 @@ export default function AboutPage() {
             publications: '',
             contactUs: '',
         })
+        mobileMenuCtx.setMobileMenu({y: -150})
+        layerCtx.setLayer(false)
     }, [])
 
     return (

@@ -35,7 +35,7 @@ const Address = () => {
                                     <td><RoomIcon/></td>
                                     <td>
                                         <span className="locality">Epicentrum Walk Lantai 3 Suite A306-307</span>
-                                        <span>Kawasan Rasuan Episentrum</span>  
+                                        <span>Kawasan Rasuna Episentrum</span>  
                                         <span className="street-address">Jl. H.R. Rasuna Said, Kuningan</span>
                                         <div>
                                             <span className="region">Jakarta Selatan</span>
@@ -53,7 +53,7 @@ const Address = () => {
                         <tbody>
                             <tr>
                                 <td><PhoneIcon /></td>
-                                <td><p> 021-299112275</p></td>
+                                <td><p> 021-29912275</p></td>
                             </tr>
                         </tbody>
                     </table>
@@ -107,7 +107,7 @@ const Address = () => {
                         <tbody>
                             <tr>
                                 <td><PhoneIcon /></td>
-                                <td><p> 021-299112275</p></td>
+                                <td><p> 0411-3662100</p></td>
                             </tr>
                         </tbody>
                     </table>

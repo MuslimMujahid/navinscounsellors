@@ -20,11 +20,10 @@ const Lawyerpage = ({ match: { params: { link } }}) => {
             publications: '',
             contactUs: '',
         })
-        window.scrollTo(0, 0)
     }, [])
     
     const lawyer_data = languageCtx.lang === 'en' ? lawyer_en : lawyer_id
-    const lawyer = lawyer_data.find(item => item.link === '/lawyer/' + link) 
+    const lawyer = lawyer_data.find(item => item.link === '/our-legal-team/' + link) 
     return (
         <React.Fragment>
             <MetaTags>

@@ -7,6 +7,8 @@ import AboutSection from '../AboutSection/AboutSection'
 import PracticeAreaSection from '../PracticeAreaSection/PracticeAreaSection'
 import LawyerSection from '../LawyerSection/LawyerSection'
 import { languageContext } from '../Context/languageContext'
+import { mobileMenuContext } from '../Context/mobileMenuContext'
+import { layerContext } from '../Context/layerContext'
 
 import MetaTags from 'react-meta-tags'
 import './style.scss'
@@ -15,6 +17,8 @@ const Homepage = () => {
 
     const linkStateCtx = useContext(linkStateContext)
     const languageCtx = useContext(languageContext)
+    const mobileMenuCtx = useContext(mobileMenuContext)
+    const layerCtx = useContext(layerContext)
 
     const lang = languageCtx.lang
 
@@ -28,6 +32,8 @@ const Homepage = () => {
             publications: '',
             contactUs: '',
         })
+        mobileMenuCtx.setMobileMenu({y: -150})
+        layerCtx.setLayer(false)
     }, [])
 
     return (

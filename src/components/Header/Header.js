@@ -1,9 +1,12 @@
 import React, { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { useSpring, animated } from 'react-spring'
+import { animated } from 'react-spring'
 import MenuIcon from '@material-ui/icons/Menu'
 import { linkStateContext } from '../Context/linkStateContext'
 import { languageContext } from '../Context/languageContext'
+import { mobileMenuContext } from '../Context/mobileMenuContext'
+import { layerContext } from '../Context/layerContext'
+
 import './style.scss'
 
 import ArrowDropDownIcon  from '@material-ui/icons/ArrowDropDown';
@@ -12,10 +15,11 @@ import CheckIcon from '@material-ui/icons/Check';
 
 const Header = () => {
 
-    const [{y}, set] = useSpring(() => ({y: -150}))
-    const [layer, setLayer] = useState(false)
+    // const [layer, setLayer] = useState(false)
     const linkStateCtx = useContext(linkStateContext)
     const languageCtx = useContext(languageContext)
+    const mobileMenuCtx = useContext(mobileMenuContext)
+    const layerCtx = useContext(layerContext)
 
     const [extendMobileLanguage, setExtendMobileLanguage] = useState(false)
     const [extendMobilePublications, setExtendMobilePublications] = useState(false)
@@ -40,7 +44,7 @@ const Header = () => {
                         <Link to="/practice-area">Practice Area</Link>
                     </li>
                     <li className={linkStateCtx.state.lawyer}>
-                        <Link to="/lawyer">Lawyer</Link>
+                        <Link to="/our-legal-team">Our Legal Team</Link>
                     </li>
                     <li className={'link-extended ' + linkStateCtx.state.publications}>
                         <div>
@@ -88,14 +92,15 @@ const Header = () => {
                     <MenuIcon 
                         style={{ fontSize: 40 }}
                         onClick={() => {
-                            set({y: (-1 * (y.getValue()+150))})
-                            setLayer(!layer)
+                            // set({y: (-1 * (y.getValue()+150))})
+                            mobileMenuCtx.setMobileMenu({y: (-1 * (mobileMenuCtx.y.getValue()+150))})
+                            layerCtx.setLayer(!layerCtx.layer)
                         }}
                     />
                 </div>
                 <animated.ul 
                     className="links-md"
-                    style={{ transform: y.interpolate(v => `translateY(${v}%)`) }}
+                    style={{ transform: mobileMenuCtx.y.interpolate(v => `translateY(${v}%)`) }}
                 >
                     <li>
                         <Link to="/">Home</Link>
@@ -107,7 +112,7 @@ const Header = () => {
                         <Link to="/practice-area">Practice Area</Link>
                     </li>
                     <li>
-                        <Link to="/lawyer">Lawyer</Link>
+                        <Link to="/our-legal-team">Our Legal Team</Link>
                     </li>
                     <li className="link-extended" onClick={() => setExtendMobilePublications(!extendMobilePublications)}>
                         <div>
@@ -157,12 +162,13 @@ const Header = () => {
                     </li>
                 </animated.ul>
             </nav>
-            {layer && 
+            {layerCtx.layer && 
                 <div 
                     className="layer"
                     onClick={() => {
-                        set({y: (-1 * (y.getValue()+150))})
-                        setLayer(!layer)
+                        // set({y: (-1 * (y.getValue()+150))})
+                        mobileMenuCtx.setMobileMenu({y: (-1 * (mobileMenuCtx.y.getValue()+150))})
+                        layerCtx.setLayer(!layerCtx.layer)
                         setExtendMobileLanguage(false)
                         setExtendMobilePublications(false)
                     }}

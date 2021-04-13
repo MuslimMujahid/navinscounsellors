@@ -148,7 +148,7 @@ const lawyer_en = [
         email: 'naim@navinscounsellors.com',
         contact: '021 – 299112275',
         image: '/images/lawyer-1-min.JPG',
-        link: '/lawyer/muh-naim-syahrir-sh-mh',
+        link: '/our-legal-team/muh-naim-syahrir-sh-mh',
     },
     {
         name: 'Febriyan Yanata Putra, S.H., M.H.',
@@ -167,7 +167,7 @@ const lawyer_en = [
         email: 'febriyan@navinscounsellors.com',
         contact: '021 - 299112275',
         image: '/images/lawyer-2.jpeg',
-        link: '/lawyer/febriyan-yanata-putra-sh-mh',
+        link: '/our-legal-team/febriyan-yanata-putra-sh-mh',
     },
     {
         name: 'Galih Putra Perdana, S.H.',
@@ -193,7 +193,7 @@ const lawyer_en = [
         email: 'galih@navinscounsellors.com',
         contact: '021 - 299112275',
         image: '/images/lawyer-3.jpg',
-        link: '/lawyer/galih-putra-perdama-sh',
+        link: '/our-legal-team/galih-putra-perdama-sh',
     },
     {
         name: 'Fanny Jenifer, S.H.',
@@ -208,7 +208,7 @@ const lawyer_en = [
         email: 'fanny@navinscounsellors.com',
         contact: '021 - 299112275',
         image: '/images/lawyer-4.jpg',
-        link: '/lawyer/fanny-jenifer-sh',
+        link: '/our-legal-team/fanny-jenifer-sh',
     },
     {
         name: 'Hana Oktaviandri, S.H.',
@@ -223,7 +223,7 @@ const lawyer_en = [
         email: 'hana@navinscounsellors.com',
         contact: '021 - 299112275',
         image: '/images/lawyer-5.jpg',
-        link: '/lawyer/hana-oktaviandri-sh',
+        link: '/our-legal-team/hana-oktaviandri-sh',
     }
 ]
 
@@ -253,7 +253,7 @@ const lawyer_id = [
         email: 'naim@navinscounsellors.com',
         contact: '021 – 299112275',
         image: '/images/lawyer-1-min.JPG',
-        link: '/lawyer/muh-naim-syahrir-sh-mh',
+        link: '/our-legal-team/muh-naim-syahrir-sh-mh',
     },
     {
         name: 'Febriyan Yanata Putra, S.H., M.H.',
@@ -271,7 +271,7 @@ const lawyer_id = [
         email: 'febriyan@navinscounsellors.com',
         contact: '021 - 299112275',
         image: '/images/lawyer-2.jpeg',
-        link: '/lawyer/febriyan-yanata-putra-sh-mh',
+        link: '/our-legal-team/febriyan-yanata-putra-sh-mh',
     },
     {
         name: 'Galih Putra Perdana, S.H.',
@@ -297,7 +297,7 @@ const lawyer_id = [
         email: 'galih@navinscounsellors.com',
         contact: '021 - 299112275',
         image: '/images/lawyer-3.jpg',
-        link: '/lawyer/galih-putra-perdama-sh',
+        link: '/our-legal-team/galih-putra-perdama-sh',
     },
     {
         name: 'Fanny Jenifer, S.H.',
@@ -312,7 +312,7 @@ const lawyer_id = [
         email: 'fanny@navinscounsellors.com',
         contact: '021 - 299112275',
         image: '/images/lawyer-4.jpg',
-        link: '/lawyer/fanny-jenifer-sh',
+        link: '/our-legal-team/fanny-jenifer-sh',
     },
     {
         name: 'Hana Oktaviandri, S.H.',
@@ -327,7 +327,7 @@ const lawyer_id = [
         email: 'hana@navinscounsellors.com',
         contact: '021 - 299112275',
         image: '/images/lawyer-5.jpg',
-        link: '/lawyer/hana-oktaviandri-sh',
+        link: '/our-legal-team/hana-oktaviandri-sh',
     }
 ]
 

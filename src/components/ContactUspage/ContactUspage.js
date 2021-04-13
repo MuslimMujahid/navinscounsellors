@@ -1,11 +1,17 @@
 import React, { useEffect, useContext } from 'react'
 import { Address, Copyright } from '../Footer/Footer'
 import { linkStateContext } from '../Context/linkStateContext'
+import { mobileMenuContext } from '../Context/mobileMenuContext'
+import { layerContext } from '../Context/layerContext'
+
 import MetaTags from 'react-meta-tags'
 import styles from './style.module.scss'
 
 function ContactUspage() {
     const linkStateCtx = useContext(linkStateContext)
+    const mobileMenuCtx = useContext(mobileMenuContext)
+    const layerCtx = useContext(layerContext)
+
     useEffect(() =>  {
         window.scrollTo(0, 0);
         linkStateCtx.set({
@@ -16,7 +22,8 @@ function ContactUspage() {
             publications: '',
             contactUs: 'active',
         })
-        window.scrollTo(0, 0)
+        mobileMenuCtx.setMobileMenu({y: -150})
+        layerCtx.setLayer(false)
     }, [])
 
     return (

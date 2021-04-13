@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react'
+import React, { useContext } from 'react'
 import { languageContext } from '../Context/languageContext'
 import { about_en, about_id } from '../items'
 import styles from './AboutSection.module.scss'
